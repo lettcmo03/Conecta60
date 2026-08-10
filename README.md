@@ -146,6 +146,6 @@ Materiais didáticos, imagens e outros conteúdos educacionais presentes no repo
 ---------------------------------------------------------------------------------------------------------------------------------------
 Autoria
 
-Projeto desenvolvido por , Antônio de Oliveira Bisneto, Eduardo Lima Pereira da Silva, João Pedro Rocha Lopes dos Reis, João Gabriel Bruno Batista e Letícia de Carvalho Monteiro de Oliveira.
+Projeto desenvolvido por , Antônio de Oliveira Bisneto, Eduardo Lima Pereira da Silva, João Pedro Rocha Lopes dos Reis, João Gabriel Bruno Batista, Letícia de Carvalho Monteiro de Oliveira e Vinicios de Souza Palácio.
 
 Conecta 60+ — Tecnologia que aproxima, ensina e conecta. 💙
