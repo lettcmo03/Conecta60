@@ -1,4 +1,7 @@
-/* geral */
+/* =========================================================
+   GERAL
+   ========================================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -15,13 +18,20 @@ body {
     color: #222222;
 }
 
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
 .cabecalho {
     width: 100%;
     height: 85px;
     background-color: #ffffff;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     padding: 0 55px;
 }
 
@@ -55,7 +65,9 @@ body {
 .btn {
     width: 120px;
     height: 35px;
+
     border-radius: 6px;
+
     font-weight: bold;
     cursor: pointer;
 }
@@ -63,45 +75,90 @@ body {
 .btn-entrar {
     background-color: #ffffff;
     color: #222222;
+
     border: 1px solid #b5b5b5;
 }
 
 .btn-criar {
     background-color: #00617a;
     color: #ffffff;
+
     border: none;
 }
 
+
+/* =========================================================
+   MENU - DESKTOP
+   ========================================================= */
+
 .menu {
     width: 100%;
-    height: 35px;
+    min-height: 55px;
+
     background-color: #ffffff;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 150px;
+
+    position: relative;
 }
 
-.menu a {
-    text-decoration: none;
+.menu-links {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menu-links a {
     color: #222222;
+
+    text-decoration: none;
+
+    font-size: 18px;
     font-weight: bold;
-    font-size: 16px;
+
+    padding: 15px 10px;
+
+    transition: color 0.2s ease;
 }
 
-.menu a:hover {
-    color: #00617a;
+.menu-links a:hover {
+    color: #075f72;
 }
 
-/* banner */
+/* escondido em telas normais */
+.menu-toggle {
+    display: none;
+
+    background: none;
+    border: none;
+
+    color: #111111;
+
+    font-size: 32px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   BANNER
+   ========================================================= */
+
 .banner {
     width: 100%;
-    height: 310px;
+    min-height: 310px;
+
     background-color: #075f72;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 55px;
+
+    padding: 30px 55px;
 }
 
 .banner-texto {
@@ -117,16 +174,27 @@ body {
 
 .btn-saiba-mais {
     display: inline-block;
-    background-color: #e6a05b;
     color: #ffffff;
     text-decoration: none;
+    font-size: 18px;
     font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 7px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 }
 
+.btn-saiba-mais:visited {
+    color: #ffffff;
+}
+
+.btn-saiba-mais:hover {
+    color: #e6a05b;
+    text-decoration: none;
+}
 .banner-imagem {
     width: 48%;
+
     display: flex;
     justify-content: center;
 }
@@ -135,26 +203,41 @@ body {
     width: 100%;
     max-width: 520px;
     height: 245px;
+
     object-fit: cover;
+
     border-radius: 6px;
 }
 
-/* whatsapp */
+
+/* =========================================================
+   BOTÃO WHATSAPP
+   ========================================================= */
+
 .whatsapp-fixo {
     position: fixed;
+
     bottom: 25px;
     right: 25px;
+
     width: 55px;
     height: 55px;
+
     border-radius: 12px;
+
     background-color: #ffffff;
     color: #e6a05b;
+
     border: 4px solid #e6a05b;
+
     font-size: 28px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     cursor: pointer;
+
     z-index: 1000;
 }
 
@@ -163,14 +246,42 @@ body {
     color: #ffffff;
 }
 
-/* proposta */
+
+/* =========================================================
+   FUNCIONALIDADES EM DESENVOLVIMENTO
+   ========================================================= */
+
+.btn-em-breve {
+    cursor: pointer;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn-em-breve:hover {
+    opacity: 0.85;
+}
+
+.btn-em-breve:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================================================
+   SOBRE / PROPOSTA
+   ========================================================= */
+
 .proposta {
     width: 100%;
     min-height: 430px;
+
     background-color: #ffffff;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     padding: 60px 120px;
 }
 
@@ -185,6 +296,7 @@ body {
 .proposta-imagem img {
     width: 300px;
     height: 300px;
+
     object-fit: contain;
 }
 
@@ -194,25 +306,34 @@ body {
 
 .proposta-texto h2 {
     color: #075f72;
+
     font-size: 26px;
+
     margin-bottom: 25px;
 }
 
 .proposta-texto p {
+    color: #222222;
+
     font-size: 17px;
     line-height: 1.5;
+
     margin-bottom: 8px;
-    color: #222222;
 }
 
 .btn-aprender {
     display: inline-block;
+
     margin-top: 20px;
+
     background-color: #075f72;
     color: #ffffff;
+
     text-decoration: none;
     font-weight: bold;
+
     padding: 15px 18px;
+
     border-radius: 7px;
 }
 
@@ -220,25 +341,36 @@ body {
     background-color: #04485a;
 }
 
-/* AULAS */
+
+/* =========================================================
+   AULAS
+   ========================================================= */
+
 .aulas {
     width: 100%;
+
     background-color: #ffffff;
+
     padding: 35px 90px 70px 90px;
 }
 
 .titulo-aulas {
     text-align: center;
+
     font-size: 28px;
+
     color: #111111;
+
     margin-bottom: 30px;
 }
 
 .aulas-linha,
 .aulas-baixo {
     display: flex;
+
     justify-content: center;
     align-items: flex-start;
+
     gap: 60px;
 }
 
@@ -246,44 +378,62 @@ body {
     margin-top: 70px;
 }
 
-.card-presencial,.card-online {
+.card-presencial,
+.card-online {
     width: 420px;
-    height: 340px;
+    min-height: 340px;
+
     background-size: cover;
     background-position: center;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     border-radius: 6px;
 }
 
 .card-presencial {
-    background-image: linear-gradient(
-        rgba(255,255,255,0.55),
-        rgba(255,255,255,0.55)
-    ), url("../img/sala_presencial.png");
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.55),
+            rgba(255, 255, 255, 0.55)
+        ),
+        url("../img/sala_presencial.png");
+
     border: 3px solid #0095d9;
 }
 
 .card-online {
-    background-image: linear-gradient(
-        rgba(255,255,255,0.55),
-        rgba(255,255,255,0.55)
-    ), url('../img/modelo_online.png');
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.55),
+            rgba(255, 255, 255, 0.55)
+        ),
+        url("../img/modelo_online.png");
+
     border: 3px solid #075f72;
 }
 
-.card-conteudo, .online-conteudo {
+.card-conteudo,
+.online-conteudo {
     width: 75%;
+
     text-align: left;
 }
 
-.card-conteudo h3, .online-conteudo h3 {
+.card-conteudo h3,
+.online-conteudo h3 {
     width: fit-content;
+
     margin: 0 auto 30px auto;
-    background-color: rgba(255,255,255,0.85);
+
+    background-color: rgba(255, 255, 255, 0.85);
+
     font-size: 24px;
+
     padding: 10px 15px;
+
     border-radius: 6px;
 }
 
@@ -295,49 +445,67 @@ body {
     color: #075f72;
 }
 
-.card-conteudo p, .online-conteudo p {
+.card-conteudo p,
+.online-conteudo p {
+    color: #111111;
+
     font-size: 17px;
     font-weight: bold;
     line-height: 1.4;
-    color: #111111;
+
     margin-bottom: 10px;
 }
 
-.info-aulas, .acesso-aulas {
+.info-aulas,
+.acesso-aulas {
     width: 420px;
 }
 
-.info-aulas h3, .acesso-aulas h3 {
-    font-size: 18px;
+.info-aulas h3,
+.acesso-aulas h3 {
     color: #111111;
+
+    font-size: 18px;
+
     margin-bottom: 10px;
 }
 
-.info-aulas p, .acesso-aulas p {
+.info-aulas p,
+.acesso-aulas p {
+    color: #222222;
+
     font-size: 17px;
     line-height: 1.5;
-    color: #222222;
+
     margin-bottom: 30px;
 }
 
-.btn-inscricao, .btn-acessar-aulas {
+.btn-inscricao,
+.btn-acessar-aulas {
     display: inline-block;
+
     text-align: center;
+
     color: #ffffff;
+
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
+
     padding: 18px 20px;
+
     border-radius: 7px;
 }
 
 .btn-inscricao {
     width: 250px;
+
     background-color: #f28c28;
 }
 
 .btn-acessar-aulas {
     width: 230px;
+
     background-color: #075f72;
 }
 
@@ -348,177 +516,239 @@ body {
 .btn-acessar-aulas:hover {
     background-color: #04485a;
 }
-/* /* AREA DE AULAS ONLINE */
+
+
+/* =========================================================
+   ÁREA DE AULAS ONLINE
+   ========================================================= */
 
 .area-aulas-online {
     width: 100%;
+
     background-color: #f4f8f9;
+
     padding: 70px 90px;
 }
 
 .area-aulas-cabecalho {
     max-width: 900px;
+
     margin: 0 auto 35px auto;
+
     text-align: center;
 }
 
 .area-aulas-etiqueta {
     display: inline-block;
+
     background-color: #e8f2f4;
     color: #075f72;
+
     font-size: 15px;
     font-weight: bold;
+
     padding: 8px 14px;
+
     border-radius: 20px;
+
     margin-bottom: 14px;
 }
 
 .area-aulas-cabecalho h2 {
     color: #075f72;
+
     font-size: 32px;
+
     margin-bottom: 14px;
 }
 
 .area-aulas-cabecalho p {
     color: #333333;
+
     font-size: 18px;
     line-height: 1.6;
 }
 
 .modulos-aulas {
     max-width: 1000px;
+
     margin: 0 auto;
 }
 
 .modulo-card {
     display: flex;
+
     background-color: #ffffff;
+
     border: 1px solid #d7e3e6;
     border-radius: 14px;
+
     overflow: hidden;
+
     box-shadow: 0 6px 20px rgba(7, 95, 114, 0.08);
 }
 
 .modulo-numero {
     width: 150px;
+
     flex-shrink: 0;
+
     background-color: #075f72;
     color: #ffffff;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     text-align: center;
+
     padding: 30px 20px;
+
     font-size: 22px;
     font-weight: bold;
 }
 
 .modulo-conteudo {
     flex: 1;
+
     padding: 30px;
 }
 
 .modulo-topo {
     display: flex;
+
     align-items: flex-start;
     justify-content: space-between;
+
     gap: 20px;
 }
 
 .modulo-categoria {
     color: #e08a3d;
+
     font-size: 14px;
     font-weight: bold;
+
     text-transform: uppercase;
+
     margin-bottom: 7px;
 }
 
 .modulo-topo h3 {
     color: #1f1f1f;
+
     font-size: 25px;
     line-height: 1.25;
 }
 
 .modulo-status {
     white-space: nowrap;
+
     background-color: #fff3e7;
     color: #b76822;
+
     border: 1px solid #f1cfaf;
     border-radius: 18px;
+
     padding: 7px 12px;
+
     font-size: 13px;
     font-weight: bold;
 }
 
 .modulo-descricao {
     color: #444444;
+
     font-size: 17px;
     line-height: 1.55;
+
     margin: 20px 0 25px 0;
 }
 
 .lista-aulas-modulo {
     border-top: 1px solid #e4e4e4;
+
     padding-top: 20px;
 }
 
 .aula-item {
     display: flex;
+
     align-items: center;
+
     gap: 16px;
+
     background-color: #f9fbfb;
+
     border: 1px solid #dce6e8;
     border-radius: 10px;
+
     padding: 18px;
 }
 
 .aula-icone {
     width: 46px;
     height: 46px;
+
     flex-shrink: 0;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     background-color: #e6a05b;
     color: #ffffff;
+
     border-radius: 50%;
+
     font-size: 20px;
     font-weight: bold;
 }
 
 .aula-info {
     flex: 1;
+
     display: flex;
     flex-direction: column;
+
     gap: 4px;
 }
 
 .aula-info span {
     color: #075f72;
+
     font-size: 14px;
     font-weight: bold;
 }
 
 .aula-info strong {
     color: #222222;
+
     font-size: 18px;
 }
 
 .aula-info small {
     color: #666666;
+
     font-size: 14px;
 }
 
 .btn-comecar-aula {
     display: inline-block;
+
     background-color: #075f72;
-    color: white;
+    color: #ffffff;
+
     padding: 12px 20px;
+
     border-radius: 7px;
+
     text-decoration: none;
+
     font-size: 16px;
     font-weight: bold;
-    transition: 0.2s;
+
+    transition: background-color 0.2s ease;
 }
 
 .btn-comecar-aula:hover {
@@ -527,27 +757,41 @@ body {
 
 .aviso-area-aulas {
     max-width: 1000px;
+
     margin: 20px auto 0 auto;
+
     color: #555555;
+
     text-align: center;
+
     font-size: 15px;
 }
 
-/* formulario */
+
+/* =========================================================
+   FORMULÁRIO
+   ========================================================= */
+
 .formulario-interesse {
     width: 100%;
+
     background-color: #f7f7f7;
+
     padding: 60px 100px;
 }
 
 .formulario-caixa {
     display: flex;
+
     justify-content: space-between;
     align-items: flex-start;
+
     gap: 50px;
 
     background-color: #ffffff;
+
     padding: 40px;
+
     border-radius: 12px;
 }
 
@@ -557,14 +801,19 @@ body {
 
 .formulario-texto h2 {
     color: #075f72;
+
     font-size: 30px;
+
     margin-bottom: 20px;
 }
 
 .formulario-texto p {
     color: #222222;
+
     font-size: 18px;
     line-height: 1.5;
+
+    margin-bottom: 15px;
 }
 
 .formulario-campos {
@@ -574,41 +823,84 @@ body {
 .grupo-campo {
     display: flex;
     flex-direction: column;
+
     margin-bottom: 18px;
 }
 
 .grupo-campo label {
-    font-weight: bold;
-    margin-bottom: 7px;
     color: #222222;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
 }
 
 .grupo-campo input,
 .grupo-campo select,
 .grupo-campo textarea {
     width: 100%;
+
     padding: 13px;
 
     border: 1px solid #cfcfcf;
     border-radius: 7px;
 
     font-size: 16px;
+
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.grupo-campo input:focus,
+.grupo-campo select:focus,
+.grupo-campo textarea:focus {
+    outline: 2px solid #8ccbd7;
+
+    border-color: #075f72;
 }
 
 .grupo-campo textarea {
     height: 120px;
-    resize: none;
+
+    resize: vertical;
 }
 
 .linha-campos {
     display: flex;
+
     gap: 15px;
 }
 
 .linha-campos .grupo-campo {
     width: 50%;
 }
+
+
+/* checkbox */
+
+.grupo-campo label:has(input[type="checkbox"]) {
+    display: flex;
+
+    flex-direction: row;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    font-weight: normal;
+    line-height: 1.4;
+
+    cursor: pointer;
+}
+
+.grupo-campo input[type="checkbox"] {
+    width: auto;
+
+    margin-top: 3px;
+
+    flex-shrink: 0;
+}
+
+
+/* botão formulário */
 
 .btn-enviar-formulario {
     background-color: #075f72;
@@ -631,96 +923,61 @@ body {
 
 .mensagem-form {
     margin-top: 15px;
-    font-weight: bold;
+
     color: #075f72;
-}
-
-.painel-cadastros {
-    background-color: #ffffff;
-    margin-top: 30px;
-    padding: 30px;
-    border-radius: 12px;
-}
-
-.painel-cadastros h3 {
-    color: #075f72;
-    margin-bottom: 20px;
-}
-
-.botoes-admin {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
-
-.botoes-admin button {
-    background-color: #e6a05b;
-    color: #ffffff;
-
-    border: none;
-    border-radius: 7px;
-
-    padding: 12px 18px;
 
     font-weight: bold;
-    cursor: pointer;
+    line-height: 1.4;
 }
 
-.botoes-admin button:hover {
-    background-color: #d9832f;
-}
 
-.lista-cadastros {
-    display: none;
-}
+/* =========================================================
+   CONTATO
+   ========================================================= */
 
-.cadastro-item {
-    border-left: 5px solid #075f72;
-    background-color: #f7f7f7;
-
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 7px;
-}
-.cadastro-item p {
-    margin-bottom: 6px;
-}
-
-/* contato */
 .contato {
     width: 100%;
+
     background-color: #075f72;
+
     padding: 55px 100px;
 }
 
 .contato-caixa {
     display: flex;
+
     justify-content: space-between;
     align-items: flex-start;
+
+    gap: 40px;
 }
 
 .contato-info,
 .redes-info {
     width: 45%;
+
     color: #ffffff;
 }
 
 .contato-info h2,
 .redes-info h2 {
     font-size: 28px;
+
     margin-bottom: 25px;
 }
 
 .contato-info p {
     font-size: 18px;
     line-height: 1.8;
+
     margin-bottom: 8px;
 }
 
 .botoes-redes {
     display: flex;
+
     gap: 15px;
+
     flex-wrap: wrap;
 }
 
@@ -744,12 +1001,18 @@ body {
     color: #ffffff;
 }
 
-/* rodape */
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
 .rodape {
     width: 100%;
+
     background-color: #ffffff;
 
     display: flex;
+
     justify-content: space-between;
     align-items: center;
 
@@ -758,18 +1021,22 @@ body {
 
 .rodape-logo {
     display: flex;
+
     align-items: center;
+
     gap: 12px;
 }
 
 .rodape-logo img {
     width: 55px;
     height: 55px;
+
     object-fit: contain;
 }
 
 .rodape-logo h2 {
     color: #075f72;
+
     font-size: 26px;
 }
 
@@ -778,12 +1045,15 @@ body {
 }
 
 .rodape p {
-    font-size: 14px;
     color: #222222;
+
+    font-size: 14px;
 }
 
-/* As aulas 
-pagina 2*/
+
+/* =========================================================
+   PÁGINA DA AULA
+   ========================================================= */
 
 .pagina-aula {
     max-width: 1100px;
@@ -794,7 +1064,7 @@ pagina 2*/
 }
 
 
-/* Navegação */
+/* navegação */
 
 .aula-navegacao {
     margin-bottom: 30px;
@@ -802,8 +1072,10 @@ pagina 2*/
 
 .btn-voltar {
     color: #075f72;
+
     font-size: 17px;
     font-weight: bold;
+
     text-decoration: none;
 }
 
@@ -812,7 +1084,7 @@ pagina 2*/
 }
 
 
-/* Cabeçalho */
+/* cabeçalho aula */
 
 .cabecalho-aula {
     margin-bottom: 30px;
@@ -820,68 +1092,550 @@ pagina 2*/
 
 .cabecalho-aula span {
     color: #e08a3d;
+
     font-size: 16px;
     font-weight: bold;
+
     text-transform: uppercase;
 }
 
 .cabecalho-aula h1 {
     color: #075f72;
+
     font-size: 36px;
+
     margin-top: 8px;
 }
 
 
-/* ÁREA DE ENSINO */
+/* conteúdo aula */
 
 .conteudo-aula {
     min-height: 400px;
+
     background-color: #ffffff;
+
     border: 2px solid #d5e0e2;
     border-radius: 15px;
+
     padding: 45px;
+
     margin-bottom: 60px;
+
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
 }
 
 .conteudo-aula h2 {
     color: #075f72;
+
     font-size: 28px;
+
+    margin-top: 35px;
     margin-bottom: 20px;
+}
+
+.conteudo-aula h2:first-child {
+    margin-top: 0;
 }
 
 .conteudo-aula p {
     color: #2c2c2c;
+
     font-size: 21px;
     line-height: 1.7;
+
     margin-bottom: 18px;
 }
 
 
-/* ÁREA DE PERGUNTAS */
+/* atividade */
 
 .perguntas-aula {
     background-color: #f4f8f9;
+
     border-radius: 15px;
+
     padding: 40px;
 }
 
 .perguntas-aula h2 {
     color: #075f72;
+
     font-size: 28px;
+
+    margin-bottom: 15px;
+}
+
+.perguntas-aula h3 {
+    color: #222222;
+
+    font-size: 21px;
+
+    margin-top: 25px;
     margin-bottom: 15px;
 }
 
 .perguntas-aula p {
     color: #333333;
+
     font-size: 19px;
     line-height: 1.6;
+
+    margin-bottom: 12px;
+}
+
+.perguntas-aula button {
+    background-color: #075f72;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 7px;
+
+    padding: 13px 18px;
+
+    margin-top: 10px;
+    margin-right: 8px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.perguntas-aula button:hover {
+    background-color: #04485a;
 }
 
 
-/* RESPONSIVO */
+/* =========================================================
+   RESPONSIVIDADE
+   CELULAR / TABLET PEQUENO
+   ========================================================= */
 
 @media (max-width: 700px) {
+
+    /* CABEÇALHO */
+
+    .cabecalho {
+        height: auto;
+
+        padding: 15px 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .logo-area {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .logo-img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .logo-texto {
+        font-size: 26px;
+    }
+
+    .botoes-topo {
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 10px;
+
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        width: auto;
+
+        min-width: 120px;
+
+        padding: 0 12px;
+    }
+
+
+    /* =====================================================
+       MENU MOBILE
+       ===================================================== */
+
+    .menu {
+        min-height: 60px;
+
+        justify-content: flex-end;
+
+        padding: 10px 20px;
+    }
+
+    /* aparece somente em telas pequenas */
+    .menu-toggle {
+        display: block;
+
+        background: none;
+        border: none;
+
+        color: #111111;
+
+        font-size: 32px;
+
+        cursor: pointer;
+
+        position: relative;
+
+        z-index: 1100;
+    }
+
+    /* links ficam escondidos até clicar */
+    .menu-links {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        background-color: #ffffff;
+
+        flex-direction: column;
+        align-items: center;
+
+        padding: 10px 0 25px 0;
+
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.10);
+
+        z-index: 1000;
+    }
+
+    /* JS adiciona essa classe */
+    .menu-links.ativo {
+        display: flex;
+    }
+
+    .menu-links a {
+        width: 100%;
+
+        padding: 17px 20px;
+
+        text-align: center;
+
+        font-size: 18px;
+        font-weight: normal;
+
+        color: #075f72;
+    }
+
+    .menu-links a:hover {
+        background-color: #f4f8f9;
+        color: #075f72;
+    }
+
+
+    /* BANNER */
+
+    .banner {
+        min-height: 0;
+
+        padding: 35px 20px;
+
+        flex-direction: column;
+
+        gap: 30px;
+
+        text-align: center;
+    }
+
+    .banner-texto {
+        width: 100%;
+    }
+
+    .banner-texto h2 {
+        font-size: 25px;
+    }
+
+    .banner-imagem {
+        width: 100%;
+    }
+
+    .banner-imagem img {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+    }
+
+
+    /* WHATSAPP */
+
+    .whatsapp-fixo {
+        width: 50px;
+        height: 50px;
+
+        bottom: 15px;
+        right: 15px;
+
+        font-size: 24px;
+    }
+
+
+    /* SOBRE */
+
+    .proposta {
+        min-height: 0;
+
+        padding: 40px 20px;
+
+        flex-direction: column;
+
+        gap: 30px;
+    }
+
+    .proposta-imagem {
+        width: 100%;
+    }
+
+    .proposta-imagem img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .proposta-texto {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .proposta-texto h2 {
+        font-size: 25px;
+    }
+
+    .proposta-texto p {
+        font-size: 17px;
+
+        text-align: left;
+    }
+
+
+    /* AULAS */
+
+    .aulas {
+        padding: 40px 20px;
+    }
+
+    .titulo-aulas {
+        font-size: 26px;
+    }
+
+    .aulas-linha,
+    .aulas-baixo {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 35px;
+    }
+
+    .aulas-baixo {
+        margin-top: 40px;
+    }
+
+    .card-presencial,
+    .card-online {
+        width: 100%;
+        max-width: 420px;
+
+        min-height: 340px;
+
+        padding: 25px 10px;
+    }
+
+    .card-conteudo,
+    .online-conteudo {
+        width: 85%;
+    }
+
+    .card-conteudo h3,
+    .online-conteudo h3 {
+        font-size: 21px;
+
+        margin-bottom: 20px;
+    }
+
+    .card-conteudo p,
+    .online-conteudo p {
+        font-size: 16px;
+    }
+
+    .info-aulas,
+    .acesso-aulas {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .btn-inscricao,
+    .btn-acessar-aulas {
+        width: 100%;
+    }
+
+
+    /* ÁREA DE AULAS */
+
+    .area-aulas-online {
+        padding: 45px 20px;
+    }
+
+    .area-aulas-cabecalho h2 {
+        font-size: 27px;
+    }
+
+    .area-aulas-cabecalho p {
+        font-size: 17px;
+    }
+
+    .modulo-card {
+        flex-direction: column;
+    }
+
+    .modulo-numero {
+        width: 100%;
+
+        padding: 18px;
+    }
+
+    .modulo-conteudo {
+        padding: 22px;
+    }
+
+    .modulo-topo {
+        flex-direction: column;
+    }
+
+    .modulo-topo h3 {
+        font-size: 22px;
+    }
+
+    .modulo-status {
+        align-self: flex-start;
+    }
+
+    .modulo-descricao {
+        font-size: 16px;
+    }
+
+    .aula-item {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .aula-info {
+        width: 100%;
+    }
+
+    .btn-comecar-aula {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    /* FORMULÁRIO */
+
+    .formulario-interesse {
+        padding: 40px 20px;
+    }
+
+    .formulario-caixa {
+        padding: 25px 20px;
+
+        flex-direction: column;
+
+        gap: 30px;
+    }
+
+    .formulario-texto,
+    .formulario-campos {
+        width: 100%;
+    }
+
+    .formulario-texto h2 {
+        font-size: 26px;
+    }
+
+    .formulario-texto p {
+        font-size: 17px;
+    }
+
+    .linha-campos {
+        flex-direction: column;
+
+        gap: 0;
+    }
+
+    .linha-campos .grupo-campo {
+        width: 100%;
+    }
+
+    .btn-enviar-formulario {
+        width: 100%;
+    }
+
+
+    /* CONTATO */
+
+    .contato {
+        padding: 40px 20px;
+    }
+
+    .contato-caixa {
+        flex-direction: column;
+
+        gap: 35px;
+    }
+
+    .contato-info,
+    .redes-info {
+        width: 100%;
+    }
+
+    .contato-info h2,
+    .redes-info h2 {
+        font-size: 25px;
+    }
+
+    .botoes-redes {
+        flex-direction: column;
+    }
+
+    .botoes-redes button {
+        width: 100%;
+    }
+
+
+    /* RODAPÉ */
+
+    .rodape {
+        padding: 25px 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+
+    .rodape-logo {
+        justify-content: center;
+    }
+
+
+    /* PÁGINA DA AULA */
+
     .pagina-aula {
         padding: 25px 18px 60px 18px;
     }
@@ -894,13 +1648,106 @@ pagina 2*/
         padding: 25px;
 
         min-height: 300px;
+
+        margin-bottom: 35px;
+    }
+
+    .conteudo-aula h2 {
+        font-size: 24px;
+
+        margin-top: 30px;
     }
 
     .conteudo-aula p {
-        font-size: 19px;
+        font-size: 18px;
     }
 
     .perguntas-aula {
         padding: 25px;
+    }
+
+    .perguntas-aula h2 {
+        font-size: 24px;
+    }
+
+    .perguntas-aula h3 {
+        font-size: 20px;
+    }
+
+    .perguntas-aula p {
+        font-size: 18px;
+    }
+
+    .perguntas-aula button {
+        width: 100%;
+
+        margin-right: 0;
+
+        padding: 14px;
+    }
+}
+
+
+/* =========================================================
+   TELAS MUITO PEQUENAS
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .cabecalho {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .logo-texto {
+        font-size: 24px;
+    }
+
+    .botoes-topo {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .menu {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .banner {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .banner-texto h2 {
+        font-size: 23px;
+    }
+
+    .proposta,
+    .aulas,
+    .area-aulas-online,
+    .formulario-interesse,
+    .contato {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .modulo-conteudo {
+        padding: 18px;
+    }
+
+    .aula-item {
+        padding: 15px;
+    }
+
+    .formulario-caixa {
+        padding: 22px 15px;
+    }
+
+    .conteudo-aula,
+    .perguntas-aula {
+        padding: 20px;
     }
 }
