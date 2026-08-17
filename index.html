@@ -18,30 +18,38 @@
             </h1>
         </div>
         <div class="botoes-topo">
-            <button class="btn btn-entrar">Entrar</button>
-            <button class="btn btn-criar">Crie uma conta</button>
+            <button class="btn btn-entrar btn-em-breve">
+                Entrar
+            </button>
+            <button class="btn btn-criar btn-em-breve">
+                Crie uma conta
+            </button>
         </div>
     </header>
 
 <!-- menu -->
-    <nav class="menu">
-        <a href="#sobre">Sobre</a>
-        <a href="#aulas">Aulas</a>
-        <a href="#contato">Contato</a>
-        <a href="#ajuda">Ajuda</a>
-    </nav>
+        <nav class="menu">
+
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+            <div class="menu-links" id="menuLinks">
+                <a href="#sobre">Sobre</a>
+                <a href="#aulas">Aulas</a>
+                <a href="#contato">Contato</a>
+                <a href="#ajuda">Ajuda</a>
+            </div>
+
+        </nav>
 <!--banner-->
     <section class="banner">
         <div class="banner-texto">
             <h2>A tecnologia ao seu alcance, na sua melhor idade.</h2>
-            <a href="#" class="btn-saiba-mais">Saiba mais</a>
+            <a href="#sobre" class="btn-saiba-mais">Saiba mais</a>
         </div>
         <div class="banner-imagem">
             <img src="assets/img/imagem1.png" alt="Idosos aprendendo computação com instrutora">
         </div>
-        <button class="whatsapp-fixo" type="button" aria-label="Botão do WhatsApp">
-            ☎
-    </button>
+            <button class="whatsapp-fixo btn-em-breve" type="button" aria-label="WhatsApp - funcionalidade em desenvolvimento">☎</button>
     </section>
 
     <!--Sobre-->
@@ -74,58 +82,47 @@
             <div class="card-presencial">
                 <div class="card-conteudo">
                     <h3>Modelo Presencial</h3>
-                    <p>
-                        É a oportunidade perfeita para você aprender lado a lado com nossos instrutores,
-                        tirar dúvidas na hora e interagir com outros alunos.
-                    </p>
-                    <p>
-                        O ambiente é acolhedor e dinâmico, feito para que você se sinta à vontade
-                        para explorar cada ferramenta e funcionalidade.
-                    </p>
+
+                    <p>É a oportunidade perfeita para você aprender lado a lado com nossos instrutores, tirar dúvidas na hora e interagir com outros alunos.</p>
+
+                    <p>O ambiente é acolhedor e dinâmico, feito para que você se sinta à vontade para explorar cada ferramenta e funcionalidade.</p>
                 </div>
             </div>
             <div class="info-aulas">
                 <h3>Onde estamos?</h3>
-                <p>
-                    Ainda não temos um espaço físico, mas planejamos nos situar perto da praça do Bem Estar!
-                </p>
+
+                <p>Ainda não temos um espaço físico, mas planejamos nos situar perto da praça do Bem Estar!</p>
+
                 <h3>Quando as aulas acontecem?</h3>
-                <p>
-                    Todas as terças e quintas das 14:00 às 15:00
-                </p>
+
+                <p>As oficinas estão sendo planejadas para acontecer duas vezes por semana, com aproximadamente 2 horas de duração por encontro. Os dias e horários serão divulgados após a definição do local parceiro.</p>
+
                 <h3>Quanto é para participar?</h3>
-                <p>
-                    É totalmente grátis!
-                </p>
+
+                <p>É totalmente grátis!</p>
                 <a href="#" class="btn-inscricao">SE INSCREVA JÁ</a>
             </div>
         </div>
         <div class="aulas-baixo">
-            <div class="acesso-aulas" id="ajuda">
-                <h3>Como ter acesso às aulas?</h3>
-                <p>
-                    1º passo: Aperte no botão “criar uma conta”<br>
-                    2º passo: Crie a sua conta com seu nome e CPF<br>
-                    3º passo: Aperte em “aulas”
-                </p>
-                <h3>Se precisar de ajuda?</h3>
-                <p>
-                    É só clicar no ícone do WhatsApp no canto inferior direito da tela.
-                    Ao clicar, você poderá falar com uma de nossas tutoras para receber auxílio.
-                </p>
-                <a href="#area-aulas" class="btn-acessar-aulas">ACESSAR AULAS</a>
-            </div>
+        <div class="acesso-aulas" id="ajuda">
+            <h3>Como ter acesso às aulas?</h3>
+
+            <p>Durante a fase de protótipo, não é necessário criar uma conta. Basta acessar a área de aprendizado e escolher uma das aulas disponíveis.</p>
+
+            <h3>Se precisar de ajuda?</h3>
+
+            <p>Os canais de atendimento do Conecta60 ainda estão sendo definidos. Em breve, você poderá entrar em contato com a equipe diretamente pelo site.</p>
+            <a href="#area-aulas" class="btn-acessar-aulas">
+                ACESSAR AULAS
+            </a>
+        </div>
             <div class="card-online">
                 <div class="online-conteudo">
                     <h3>Modelo Online</h3>
-                    <p>
-                        Com nossas aulas online, a tecnologia chega até você, no conforto do seu lar.
-                        É a solução perfeita para aprender no seu próprio ritmo, sem precisar sair de casa.
-                    </p>
-                    <p>
-                        Você terá acesso a um conteúdo pensado para o seu aprendizado,
-                        com a flexibilidade de assistir às aulas onde e quando for mais conveniente.
-                    </p>
+
+                    <p>Com nossas aulas online, a tecnologia chega até você, no conforto do seu lar. É a solução perfeita para aprender no seu próprio ritmo, sem precisar sair de casa.</p>
+
+                    <p>Você terá acesso a um conteúdo pensado para o seu aprendizado, com a flexibilidade de assistir às aulas onde e quando for mais conveniente.</p>
                 </div>
             </div>
         </div>
@@ -193,11 +190,10 @@
     <section class="formulario-interesse" id="interesse">
         <div class="formulario-caixa">
             <div class="formulario-texto">
-                <h2>Tenho interesse no Conecta 60+</h2>
-                <p>
-                    Preencha seus dados abaixo para que nossa equipe possa entrar em contato
-                    e explicar melhor como participar do projeto.
-                </p>
+                <h2>Tenho interesse no Conecta60</h2>
+
+                <p>Esta área demonstra como será realizado o registro de interesse dos participantes.</p>
+                <p><strong>Funcionalidade em desenvolvimento: Os dados ainda não são enviados à equipe.</strong></p>
             </div>
             <form class="formulario-campos" id="formInteresse">
                 <div class="grupo-campo">
@@ -227,51 +223,52 @@
                     <label for="mensagem">Mensagem</label>
                     <textarea id="mensagem" placeholder="Escreva sua mensagem ou dúvida"></textarea>
                 </div>
+                <div class="grupo-campo">
+                    <label>
+                        <input type="checkbox" id="consentimento" required>
+                        Estou ciente de que este formulário faz parte de um
+                        protótipo acadêmico e que os dados ainda não serão enviados.
+                    </label>
+                </div>
                 <button type="submit" class="btn-enviar-formulario">
                     Enviar interesse
                 </button>
                 <p class="mensagem-form" id="mensagemForm"></p>
             </form>
         </div>
-        <div class="painel-cadastros">
-            <h3>Cadastros registrados no protótipo</h3>
-            <div class="botoes-admin">
-                <button type="button" id="btnVerCadastros">Ver cadastros</button>
-                <button type="button" id="btnBaixarCadastros">Baixar lista</button>
-                <button type="button" id="btnLimparCadastros">Limpar cadastros</button>
-            </div>
-            <div class="lista-cadastros" id="listaCadastros"></div>
-        </div>
     </section>
 
 <!--parte dos Contatos-->
     <section class="contato" id="contato">
-    <div class="contato-caixa">
-        <div class="contato-info">
-            <h2>Contato</h2>
-            <p><strong>Nosso telefone:</strong> (22) 99750-7088</p>
-            <p><strong>Nosso WhatsApp:</strong> (22) 99750-7088</p>
-            <p><strong>Nosso email:</strong>conecta60@gmail.com</p>
-            <p><strong>DADOS FICTICIOS</strong></p>
-        </div>
-        <div class="redes-info">
-            <h2>Nossas Redes</h2>
-            <div class="botoes-redes">
-                <button type="button">Facebook</button>
-                <button type="button">Instagram</button>
-                <button type="button">X</button>
+        <div class="contato-caixa">
+            <div class="contato-info">
+                <h2>Contato</h2>
+
+                <p>
+                    Os canais oficiais de contato do Conecta60
+                    ainda estão sendo definidos.
+                </p>
+
+                <p>
+                    <strong>Em breve.</strong>
+                </p>
+            </div>
+            <div class="redes-info">
+                <h2>Nossas Redes</h2>
+                <div class="botoes-redes">
+                    <button type="button" class="btn-em-breve">Facebook</button>
+                    <button type="button" class="btn-em-breve">Instagram</button>
+                </div>
             </div>
         </div>
-    </div>
     </section>
-
 <!-- pérroda -->
 <footer class="rodape">
     <div class="rodape-logo">
         <img src="assets/img/logo.jpg" alt="Logo Conecta 60+">
         <h2>Conecta <span>60+</span></h2>
     </div>
-    <p>Copyright © 2025 Conecta 60+. All rights reserved</p>
+    <p>Copyright © 2026 Conecta 60+. All rights reserved</p>
 </footer>
 
 <!--javascripito-->
