@@ -176,7 +176,7 @@ Conecta60/
 │       └── script.js
 │
 ├── docs/
-│   └── plano-acao-rascunho.md
+│   └── plano-acao-rascunho.pdf
 │
 ├── slides de aula/
 │   └── Aula 1 - Slide.pdf
@@ -194,19 +194,17 @@ A estrutura poderá ser ajustada conforme o desenvolvimento do projeto.
 
 ## Documentação
 
-A pasta [`docs/`](docs/) reúne documentos relacionados ao planejamento e à ação de extensão.
+Nesta etapa, conforme solicitado em aula, a pasta contém apenas o Rascunho do Plano de Ação, que será desenvolvido e atualizado ao longo da disciplina.
 
-Atualmente, a documentação prevista inclui:
+O documento contempla inicialmente:
 
-* Rascunho do Plano de Ação;
-* definição do território e comunidade;
-* objetivos da ação;
-* indicadores;
-* protocolo de presença/evidência.
+identificação do projeto e território;
+comunidade e parceiro/contato;
+objetivo geral e objetivos específicos;
+indicadores da ação;
+forma prevista de acompanhamento e registro da participação.
 
-Os materiais pedagógicos e slides utilizados nas aulas também são mantidos no repositório.
-
----
+Novos documentos poderão ser adicionados à pasta conforme forem solicitados nas etapas seguintes do projeto.
 
 ## Como executar o protótipo
 
@@ -221,7 +219,7 @@ Para executar localmente:
 Exemplo utilizando Git:
 
 ```bash
-git clone URL-DO-REPOSITORIO
+git clone https://lettcmo03.github.io/Conecta60/
 ```
 
 Depois, abra:
