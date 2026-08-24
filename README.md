@@ -1,67 +1,86 @@
-# Conecta60
+# Conecta 60+
 
-O **Conecta60** é um projeto de inclusão e alfabetização digital voltado para pessoas com **60 anos ou mais**, desenvolvido no contexto da disciplina de **Práticas Extensionistas Integradoras III**, do curso de Engenharia de Software da Universidade de Vassouras — Campus Saquarema.
+O **Conecta 60+** é um projeto de inclusão e alfabetização digital voltado principalmente para pessoas com 60 anos ou mais, desenvolvido no contexto da disciplina de **Práticas Extensionistas Integradoras III**, do curso de Engenharia de Software da Universidade de Vassouras — Campus Saquarema.
 
-O projeto busca tornar o uso da tecnologia mais simples, seguro e acessível no dia a dia, respeitando o ritmo de aprendizagem de cada participante e utilizando situações reais como base para o ensino.
+O projeto busca tornar o uso da tecnologia mais simples, seguro e acessível no cotidiano, respeitando o ritmo de aprendizagem de cada participante e utilizando situações práticas como base para o ensino.
 
-> **Status:** protótipo acadêmico em desenvolvimento.
+> **Status:** protótipo acadêmico em desenvolvimento — 2026.2.
 
 ---
 
 ## Objetivo
 
-Promover autonomia digital para pessoas idosas por meio de aulas práticas e acessíveis, auxiliando os participantes a utilizar celulares, aplicativos e serviços digitais com maior segurança, confiança e independência.
+Promover a inclusão digital e ampliar a autonomia de pessoas idosas no uso de smartphones, aplicativos e serviços digitais, oferecendo orientações práticas para que utilizem essas tecnologias com maior segurança, confiança e independência.
 
 ---
 
 ## Sobre o projeto
 
-O Conecta60 nasceu da proposta de aproximar pessoas idosas da tecnologia de maneira simples, prática e acolhedora.
+O Conecta 60+ surgiu da necessidade de aproximar pessoas idosas das tecnologias presentes no cotidiano.
 
-Mais do que ensinar onde clicar, o projeto busca desenvolver a confiança necessária para que os participantes consigam compreender e realizar tarefas digitais do cotidiano de forma cada vez mais independente.
+Mais do que ensinar onde clicar, o projeto busca desenvolver a confiança e a autonomia necessárias para que os participantes compreendam e realizem tarefas digitais de forma cada vez mais independente.
 
-As oficinas são planejadas para combinar:
+As atividades são planejadas para combinar:
 
-* explicações teóricas;
-* demonstrações passo a passo;
-* atividades práticas;
-* utilização do próprio dispositivo do participante;
-* acompanhamento durante a realização das tarefas;
-* materiais de apoio.
+- explicações em linguagem simples;
+- demonstrações passo a passo;
+- atividades práticas;
+- utilização do próprio dispositivo do participante;
+- acompanhamento individual quando necessário;
+- repetição dos procedimentos;
+- materiais de apoio adaptados.
 
-O projeto encontra-se atualmente em fase de **prototipação, desenvolvimento dos materiais pedagógicos e planejamento da ação de extensão**.
+O projeto encontra-se atualmente em fase de desenvolvimento do protótipo, produção de materiais pedagógicos e preparação das ações extensionistas presenciais.
 
 ---
 
-## Público-alvo e território
+## Público-alvo e ação extensionista atual
 
-**Público-alvo:** pessoas com 60 anos ou mais.
+**Público-alvo geral:** pessoas com 60 anos ou mais que apresentem dificuldades no uso de tecnologias digitais.
 
 **Território:** Saquarema — RJ.
 
-O local/parceiro responsável pela realização da ação de extensão está em processo de definição e será registrado na documentação do projeto assim que confirmado.
+Na etapa atual da ação extensionista, o projeto trabalhará com senhoras participantes do **Grupo Roda**, liderado por **Alba Alcione**.
+
+Os locais, datas e demais informações operacionais das atividades presenciais são registrados no **Plano de Ação vigente**, permitindo que alterações realizadas durante o projeto sejam atualizadas na documentação sem tornar o README desatualizado.
 
 ---
 
 ## Conteúdos planejados
 
-Ao longo do desenvolvimento do projeto, poderão ser trabalhados conteúdos como:
+Os conteúdos do Conecta 60+ são organizados de acordo com situações práticas do cotidiano.
 
-* uso básico do smartphone;
-* configurações e recursos importantes do celular;
-* WhatsApp;
-* fotos, vídeos e compartilhamento de arquivos;
-* navegação na internet;
-* pesquisas no Google;
-* e-mail;
-* segurança digital;
-* identificação de golpes e mensagens suspeitas;
-* GOV.br e serviços públicos digitais;
-* aplicativos bancários e cuidados com transações;
-* Inteligência Artificial e ChatGPT;
-* aplicativos úteis para o cotidiano.
+Entre os temas previstos estão:
 
-> Os conteúdos acima representam o **planejamento geral do projeto**. Nem todos os módulos estão implementados no protótipo atual.
+- noções básicas de smartphone e configurações do aparelho;
+- contatos e WhatsApp;
+- chamadas, fotos, vídeos e compartilhamento de arquivos;
+- navegação na internet e pesquisas;
+- e-mail;
+- serviços públicos digitais, como GOV.br;
+- segurança digital e prevenção de golpes;
+- cuidados com aplicativos bancários e transações digitais;
+- Inteligência Artificial e ferramentas como o ChatGPT;
+- aplicativos úteis para atividades do cotidiano.
+
+A ordem e a seleção dos conteúdos podem ser adaptadas conforme as necessidades identificadas junto aos participantes.
+
+> Os conteúdos acima representam o planejamento geral do projeto. Nem todos os módulos estão implementados no protótipo atual.
+
+---
+
+## MVP do protótipo
+
+Na etapa atual, o MVP do Conecta 60+ é composto por:
+
+1. uma página inicial responsiva apresentando o projeto, sua proposta e a área de aprendizado;
+2. uma área destinada à organização dos módulos e aulas digitais;
+3. uma primeira aula demonstrativa do **Módulo 2 — Comunicação Digital**, ensinando como adicionar um contato para utilização no WhatsApp;
+4. um formulário demonstrativo para registro de interesse dos participantes, ainda sem envio ou armazenamento real dos dados.
+
+O protótipo não possui, nesta etapa, autenticação de usuários, área individual do aluno ou banco de dados.
+
+Novas aulas, módulos e funcionalidades poderão ser adicionados progressivamente conforme o desenvolvimento e os testes do projeto.
 
 ---
 
