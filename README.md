@@ -1,67 +1,86 @@
-# Conecta60
+# Conecta 60+
 
-O **Conecta60** é um projeto de inclusão e alfabetização digital voltado para pessoas com **60 anos ou mais**, desenvolvido no contexto da disciplina de **Práticas Extensionistas Integradoras III**, do curso de Engenharia de Software da Universidade de Vassouras — Campus Saquarema.
+O **Conecta 60+** é um projeto de inclusão e alfabetização digital voltado principalmente para pessoas com 60 anos ou mais, desenvolvido no contexto da disciplina de **Práticas Extensionistas Integradoras III**, do curso de Engenharia de Software da Universidade de Vassouras — Campus Saquarema.
 
-O projeto busca tornar o uso da tecnologia mais simples, seguro e acessível no dia a dia, respeitando o ritmo de aprendizagem de cada participante e utilizando situações reais como base para o ensino.
+O projeto busca tornar o uso da tecnologia mais simples, seguro e acessível no cotidiano, respeitando o ritmo de aprendizagem de cada participante e utilizando situações práticas como base para o ensino.
 
-> **Status:** protótipo acadêmico em desenvolvimento.
+> **Status:** protótipo acadêmico em desenvolvimento — 2026.2.
 
 ---
 
 ## Objetivo
 
-Promover autonomia digital para pessoas idosas por meio de aulas práticas e acessíveis, auxiliando os participantes a utilizar celulares, aplicativos e serviços digitais com maior segurança, confiança e independência.
+Promover a inclusão digital e ampliar a autonomia de pessoas idosas no uso de smartphones, aplicativos e serviços digitais, oferecendo orientações práticas para que utilizem essas tecnologias com maior segurança, confiança e independência.
 
 ---
 
 ## Sobre o projeto
 
-O Conecta60 nasceu da proposta de aproximar pessoas idosas da tecnologia de maneira simples, prática e acolhedora.
+O Conecta 60+ surgiu da necessidade de aproximar pessoas idosas das tecnologias presentes no cotidiano.
 
-Mais do que ensinar onde clicar, o projeto busca desenvolver a confiança necessária para que os participantes consigam compreender e realizar tarefas digitais do cotidiano de forma cada vez mais independente.
+Mais do que ensinar onde clicar, o projeto busca desenvolver a confiança e a autonomia necessárias para que os participantes compreendam e realizem tarefas digitais de forma cada vez mais independente.
 
-As oficinas são planejadas para combinar:
+As atividades são planejadas para combinar:
 
-* explicações teóricas;
-* demonstrações passo a passo;
-* atividades práticas;
-* utilização do próprio dispositivo do participante;
-* acompanhamento durante a realização das tarefas;
-* materiais de apoio.
+- explicações em linguagem simples;
+- demonstrações passo a passo;
+- atividades práticas;
+- utilização do próprio dispositivo do participante;
+- acompanhamento individual quando necessário;
+- repetição dos procedimentos;
+- materiais de apoio adaptados.
 
-O projeto encontra-se atualmente em fase de **prototipação, desenvolvimento dos materiais pedagógicos e planejamento da ação de extensão**.
+O projeto encontra-se atualmente em fase de desenvolvimento do protótipo, produção de materiais pedagógicos e preparação das ações extensionistas presenciais.
 
 ---
 
-## Público-alvo e território
+## Público-alvo e ação extensionista atual
 
-**Público-alvo:** pessoas com 60 anos ou mais.
+**Público-alvo geral:** pessoas com 60 anos ou mais que apresentem dificuldades no uso de tecnologias digitais.
 
 **Território:** Saquarema — RJ.
 
-O local/parceiro responsável pela realização da ação de extensão está em processo de definição e será registrado na documentação do projeto assim que confirmado.
+Na etapa atual da ação extensionista, o projeto trabalhará com senhoras participantes do **Grupo Roda**, liderado por **Alba Alcione**.
+
+Os locais, datas e demais informações operacionais das atividades presenciais são registrados no **Plano de Ação vigente**, permitindo que alterações realizadas durante o projeto sejam atualizadas na documentação sem tornar o README desatualizado.
 
 ---
 
 ## Conteúdos planejados
 
-Ao longo do desenvolvimento do projeto, poderão ser trabalhados conteúdos como:
+Os conteúdos do Conecta 60+ são organizados de acordo com situações práticas do cotidiano.
 
-* uso básico do smartphone;
-* configurações e recursos importantes do celular;
-* WhatsApp;
-* fotos, vídeos e compartilhamento de arquivos;
-* navegação na internet;
-* pesquisas no Google;
-* e-mail;
-* segurança digital;
-* identificação de golpes e mensagens suspeitas;
-* GOV.br e serviços públicos digitais;
-* aplicativos bancários e cuidados com transações;
-* Inteligência Artificial e ChatGPT;
-* aplicativos úteis para o cotidiano.
+Entre os temas previstos estão:
 
-> Os conteúdos acima representam o **planejamento geral do projeto**. Nem todos os módulos estão implementados no protótipo atual.
+- noções básicas de smartphone e configurações do aparelho;
+- contatos e WhatsApp;
+- chamadas, fotos, vídeos e compartilhamento de arquivos;
+- navegação na internet e pesquisas;
+- e-mail;
+- serviços públicos digitais, como GOV.br;
+- segurança digital e prevenção de golpes;
+- cuidados com aplicativos bancários e transações digitais;
+- Inteligência Artificial e ferramentas como o ChatGPT;
+- aplicativos úteis para atividades do cotidiano.
+
+A ordem e a seleção dos conteúdos podem ser adaptadas conforme as necessidades identificadas junto aos participantes.
+
+> Os conteúdos acima representam o planejamento geral do projeto. Nem todos os módulos estão implementados no protótipo atual.
+
+---
+
+## MVP do protótipo
+
+Na etapa atual, o MVP do Conecta 60+ é composto por:
+
+1. uma página inicial responsiva apresentando o projeto, sua proposta e a área de aprendizado;
+2. uma área destinada à organização dos módulos e aulas digitais;
+3. uma primeira aula demonstrativa do **Módulo 2 — Comunicação Digital**, ensinando como adicionar um contato para utilização no WhatsApp;
+4. um formulário demonstrativo para registro de interesse dos participantes, ainda sem envio ou armazenamento real dos dados.
+
+O protótipo não possui, nesta etapa, autenticação de usuários, área individual do aluno ou banco de dados.
+
+Novas aulas, módulos e funcionalidades poderão ser adicionados progressivamente conforme o desenvolvimento e os testes do projeto.
 
 ---
 
@@ -159,94 +178,230 @@ Também serão discutidos os limites dessas ferramentas e a importância de veri
 A estrutura do projeto está organizada da seguinte forma:
 
 ```text
-Conecta60/
+docs/
+├── formularios/
+│ ├── formulario-cadastro-online.md
+│ └── formulario-presenca-online.md
 │
-├── assets/
-│   ├── css/
-│   │   └── style.css
-│   │
-│   ├── img/
-│   │   ├── favicon.ico
-│   │   ├── imagem1.png
-│   │   ├── logo.jpg
-│   │   ├── modelo_online.png
-│   │   └── sala_presencial.png
-│   │
-│   └── js/
-│       └── script.js
+├── historico/
+│ └── plano-acao-rascunho.pdf
 │
-├── docs/
-│   └── plano-acao-rascunho.pdf
+├── materiais-de-aula/
+│ └── aula-1-slide.pdf
 │
-├── slides de aula/
-│   └── Aula 1 - Slide.pdf
+├── modelos/
+│ ├── certificados/
+│ ├── presenca/
+│ └── uso-de-imagem/
+│ └── modelo-termo-consentimento.pdf
 │
-├── .gitattributes
-├── aula-contato.html
-├── index.html
-├── LICENSE
-└── README.md
+├── planejamento/
+│ └── plano-de-acao-conecta-60+.pdf
+│
+├── planos-de-aula/
+│ └── modulo-1-primeiros-contatos-com-a-tecnologia.pdf
+│
+└── relatorios/
 ```
 
 A estrutura poderá ser ajustada conforme o desenvolvimento do projeto.
 
 ---
 
-## Documentação
+**## Documentação**
 
-Nesta etapa, conforme solicitado em aula, a pasta contém apenas o Rascunho do Plano de Ação, que será desenvolvido e atualizado ao longo da disciplina.
+A documentação do Conecta 60+ reúne os materiais acadêmicos, pedagógicos e operacionais utilizados no planejamento, desenvolvimento, execução e acompanhamento das ações do projeto.
 
-O documento contempla inicialmente:
+Os documentos serão organizados e mantidos de forma centralizada na pasta \`docs/\`, facilitando a consulta pela equipe, o controle das versões atualizadas e a organização dos materiais utilizados durante as atividades.
 
-identificação do projeto e território;
-comunidade e parceiro/contato;
-objetivo geral e objetivos específicos;
-indicadores da ação;
-forma prevista de acompanhamento e registro da participação.
+Entre os documentos previstos estão:
 
-Novos documentos poderão ser adicionados à pasta conforme forem solicitados nas etapas seguintes do projeto.
+\- **\*\*Plano de Ação\*\*** — documento de referência para as ações extensionistas atuais, contendo objetivos, atividades, cronograma, público atendido, indicadores e evidências previstas;
 
-## Como executar o protótipo
+\- **\*\*Planos de Aula\*\*** — organização dos objetivos, conteúdos, recursos e atividades práticas previstas para cada encontro;
 
-Atualmente, o projeto utiliza **HTML, CSS e JavaScript**, sem necessidade de instalação de dependências.
+\- **\*\*Modelo de Registro de Presença Física\*\*** — utilizado durante as oficinas para registrar a participação por meio de lista em papel e assinatura;
+
+\- **\*\*Registro de Presença Online\*\*** — recurso complementar utilizado para o controle digital da participação nas atividades;
+
+\- **\*\*Modelo de Autorização de Uso de Imagem\*\*** — utilizado para registrar o consentimento dos participantes para fotografias e demais registros das atividades;
+
+\- **\*\*Modelo de Certificado\*\*** — documento padrão utilizado para emissão dos certificados de participação;
+
+\- **\*\*Materiais de Apoio\*\*** — apresentações, slides, conteúdos didáticos e demais recursos utilizados durante as aulas;
+
+\- **\*\*Relatórios e Evidências\*\*** — documentos relacionados ao acompanhamento, registro e avaliação das ações realizadas pelo projeto.
+
+**### Documento vigente**
+
+O **\*\*Plano de Ação vigente\*\*** deverá ser considerado a principal referência para as informações relacionadas às ações extensionistas atuais.
+
+Nele deverão estar registradas informações como:
+
+\- comunidade atendida;
+
+\- locais das ações;
+
+\- datas previstas;
+
+\- objetivos;
+
+\- metodologia;
+
+\- indicadores;
+
+\- formas de registro de presença;
+
+\- evidências previstas;
+
+\- responsabilidades da equipe.
+
+Documentos produzidos em etapas ou semestres anteriores poderão ser mantidos como histórico do projeto, mas não deverão substituir as decisões registradas na documentação vigente.
+
+**### Organização e controle de versões**
+
+Para evitar o uso de documentos desatualizados, os arquivos deverão seguir uma organização padronizada.
+
+Sempre que possível:
+
+\- os arquivos deverão possuir nomes claros e relacionados ao seu conteúdo;
+
+\- a versão atualmente utilizada deverá ser facilmente identificada;
+
+\- versões anteriores poderão ser armazenadas separadamente como histórico;
+
+\- documentos antigos não deverão permanecer misturados aos arquivos vigentes;
+
+\- alterações relevantes poderão ser acompanhadas pelo histórico de commits do Git.
+
+Exemplos de nomes padronizados:
+
+\`plano-de-acao-2026-2.pdf\`
+
+\`plano-aula-whatsapp-contatos.pdf\`
+
+\`modelo-presenca-fisica.docx\`
+
+\`modelo-presenca-online.md\`
+
+\`modelo-autorizacao-imagem.docx\`
+
+\`modelo-certificado.pptx\`
+
+**### Atualização da documentação**
+
+A documentação deverá ser revisada sempre que ocorrerem mudanças relevantes no projeto, principalmente alterações relacionadas a:
+
+\- datas ou locais das oficinas;
+
+\- comunidade atendida;
+
+\- metodologia;
+
+\- duração ou organização das aulas;
+
+\- conteúdos programáticos;
+
+\- indicadores;
+
+\- formas de registro de presença;
+
+\- cronograma;
+
+\- responsáveis pelas atividades.
+
+O README apresenta uma visão geral do Conecta 60+, enquanto informações operacionais mais detalhadas e sujeitas a alterações deverão permanecer nos documentos específicos disponíveis na pasta \`docs/\`.
+
+Os modelos poderão ser atualizados ao longo do desenvolvimento do projeto conforme as necessidades identificadas pela equipe e as orientações da disciplina.
+
+*>* **\*\*Privacidade:\*\*** *como este repositório é público, documentos preenchidos que contenham nomes, assinaturas, telefones, e-mails, respostas individuais de formulários, autorizações assinadas, certificados preenchidos ou outras informações pessoais dos participantes não devem ser disponibilizados no GitHub. O repositório deve armazenar apenas modelos sem dados pessoais e materiais apropriados para divulgação pública.*
+
+**## Como executar o protótipo**
+
+Atualmente, o projeto utiliza **\*\*HTML, CSS e JavaScript\*\***, sem necessidade de instalação de dependências.
 
 Para executar localmente:
 
-1. Clone ou baixe este repositório;
-2. Abra a pasta do projeto;
-3. Abra o arquivo `index.html` em um navegador.
+1\. Clone ou baixe este repositório;
+
+2\. Abra a pasta do projeto;
+
+3\. Abra o arquivo \`index.html\` em um navegador.
 
 Exemplo utilizando Git:
 
-```bash
-git clone https://lettcmo03.github.io/Conecta60/
-```
+\`\`\`bash
+git clone https://github.com/lettcmo03/Conecta60.git
+\`\`\`
 
-Depois, abra:
+Depois, acesse a pasta do projeto:
 
-```text
+\`\`\`bash
+cd Conecta60
+\`\`\`
+
+E abra o arquivo:
+
+\`\`\`text
 index.html
-```
+\`\`\`
 
-Quando uma versão pública estiver disponível, o link será adicionado nesta seção.
+**### Versão pública**
+
+O protótipo também está disponível online por meio do GitHub Pages:
+
+[https://lettcmo03.github.io/Conecta60/](https://lettcmo03.github.io/Conecta60/)
+
+\---
+
+## Indicadores da ação
+
+A ação extensionista atual será acompanhada por indicadores quantitativos e qualitativos, permitindo avaliar participação, execução das atividades e percepção das participantes.
+
+Os principais indicadores definidos são:
+
+- atender, no mínimo, **20 participantes**;
+- registrar a presença por meio de **lista em papel com assinatura** e também por **registro online**;
+- alcançar pelo menos **75% das participantes realizando as tarefas propostas durante as aulas**;
+- coletar pelo menos **5 depoimentos**, mediante consentimento;
+- registrar a quantidade de convidadas que não participaram, quando aplicável.
+
+A avaliação prática será realizada por meio da observação das participantes durante as atividades propostas ao final dos encontros.
 
 ---
 
 ## Status do projeto
 
-**Em desenvolvimento — protótipo acadêmico.**
+O Conecta 60+ encontra-se em fase de desenvolvimento e preparação para a execução das oficinas presenciais.
 
-Atualmente estão sendo desenvolvidos e aprimorados:
+### Concluído ou definido
 
-* interface do site;
-* responsividade;
-* aula digital demonstrativa;
-* materiais pedagógicos;
-* documentação da ação de extensão;
-* definição do território/parceiro;
-* indicadores e forma de registro da participação.
+- definição do público da ação extensionista atual;
+- contato com a comunidade participante;
+- definição inicial da metodologia das aulas;
+- definição dos indicadores de acompanhamento;
+- definição das formas de registro de presença, com controle físico e online;
+- desenvolvimento inicial do protótipo web;
+- desenvolvimento da primeira aula digital demonstrativa.
 
-O protótipo não representa ainda um sistema completo de gestão de alunos ou plataforma de ensino em produção.
+### Em andamento
+
+- revisão e organização da documentação do projeto;
+- desenvolvimento dos materiais das aulas presenciais;
+- ampliação dos módulos e conteúdos do protótipo;
+- preparação dos modelos de uso de imagem, presença e certificado;
+- preparação das ações presenciais de outubro de 2026.
+
+### Próximas etapas
+
+\- realização da primeira aula presencial em **\*\*04/10/2026\*\***;
+\- realização da segunda aula presencial em **\*\*11/10/2026\*\***;
+\- coleta das evidências das atividades;
+\- análise dos resultados obtidos;
+\- atualização da documentação após as oficinas;
+\- continuidade do desenvolvimento do software educativo.
+
+\* As datas previstas poderão ser alteradas mediante solicitação da patrocinadora do evento, inclusive sem aviso prévio.
 
 ---
 
