@@ -178,58 +178,145 @@ Também serão discutidos os limites dessas ferramentas e a importância de veri
 A estrutura do projeto está organizada da seguinte forma:
 
 ```text
-Conecta60/
-│
-├── assets/
-│   ├── css/
-│   │   └── style.css
-│   │
-│   ├── img/
-│   │   ├── favicon.ico
-│   │   ├── imagem1.png
-│   │   ├── logo.jpg
-│   │   ├── modelo_online.png
-│   │   └── sala_presencial.png
-│   │
-│   └── js/
-│       └── script.js
-│
-├── docs/
+docs/
+├── historico/
 │   └── plano-acao-rascunho.pdf
 │
-├── slides de aula/
+├── materiais-de-aula/
 │   └── Aula 1 - Slide.pdf
 │
-├── .gitattributes
-├── aula-contato.html
-├── index.html
-├── LICENSE
-└── README.md
+├── modelos/
+│   ├── cadastro/
+│   │   └── forms
+│   ├── certificados/
+│   ├── presenca/
+│   │   └── Registro De Presença
+│   └── uso-de-imagem/
+│
+├── planejamento/
+├── planos-de-aula/
+│   └── Módulo 1 — Primeiros contatos...
+│
+└── relatorios/
 ```
 
 A estrutura poderá ser ajustada conforme o desenvolvimento do projeto.
 
 ---
 
-## Documentação
+**## Documentação**
 
-Nesta etapa, conforme solicitado em aula, a pasta contém apenas o Rascunho do Plano de Ação, que será desenvolvido e atualizado ao longo da disciplina.
+A documentação do Conecta 60+ reúne os materiais acadêmicos, pedagógicos e operacionais utilizados no planejamento, desenvolvimento, execução e acompanhamento das ações do projeto.
 
-O documento contempla inicialmente:
+Os documentos serão organizados e mantidos de forma centralizada na pasta \`docs/\`, facilitando a consulta pela equipe, o controle das versões atualizadas e a organização dos materiais utilizados durante as atividades.
 
-identificação do projeto e território;
-comunidade e parceiro/contato;
-objetivo geral e objetivos específicos;
-indicadores da ação;
-forma prevista de acompanhamento e registro da participação.
+Entre os documentos previstos estão:
 
-Novos documentos poderão ser adicionados à pasta conforme forem solicitados nas etapas seguintes do projeto.
+\- **\*\*Plano de Ação\*\*** — documento de referência para as ações extensionistas atuais, contendo objetivos, atividades, cronograma, público atendido, indicadores e evidências previstas;
+
+\- **\*\*Planos de Aula\*\*** — organização dos objetivos, conteúdos, recursos e atividades práticas previstas para cada encontro;
+
+\- **\*\*Modelo de Registro de Presença Física\*\*** — utilizado durante as oficinas para registrar a participação por meio de lista em papel e assinatura;
+
+\- **\*\*Registro de Presença Online\*\*** — recurso complementar utilizado para o controle digital da participação nas atividades;
+
+\- **\*\*Modelo de Autorização de Uso de Imagem\*\*** — utilizado para registrar o consentimento dos participantes para fotografias e demais registros das atividades;
+
+\- **\*\*Modelo de Certificado\*\*** — documento padrão utilizado para emissão dos certificados de participação;
+
+\- **\*\*Materiais de Apoio\*\*** — apresentações, slides, conteúdos didáticos e demais recursos utilizados durante as aulas;
+
+\- **\*\*Relatórios e Evidências\*\*** — documentos relacionados ao acompanhamento, registro e avaliação das ações realizadas pelo projeto.
+
+**### Documento vigente**
+
+O **\*\*Plano de Ação vigente\*\*** deverá ser considerado a principal referência para as informações relacionadas às ações extensionistas atuais.
+
+Nele deverão estar registradas informações como:
+
+\- comunidade atendida;
+
+\- locais das ações;
+
+\- datas previstas;
+
+\- objetivos;
+
+\- metodologia;
+
+\- indicadores;
+
+\- formas de registro de presença;
+
+\- evidências previstas;
+
+\- responsabilidades da equipe.
+
+Documentos produzidos em etapas ou semestres anteriores poderão ser mantidos como histórico do projeto, mas não deverão substituir as decisões registradas na documentação vigente.
+
+**### Organização e controle de versões**
+
+Para evitar o uso de documentos desatualizados, os arquivos deverão seguir uma organização padronizada.
+
+Sempre que possível:
+
+\- os arquivos deverão possuir nomes claros e relacionados ao seu conteúdo;
+
+\- a versão atualmente utilizada deverá ser facilmente identificada;
+
+\- versões anteriores poderão ser armazenadas separadamente como histórico;
+
+\- documentos antigos não deverão permanecer misturados aos arquivos vigentes;
+
+\- alterações relevantes poderão ser acompanhadas pelo histórico de commits do Git.
+
+Exemplos de nomes padronizados:
+
+\`plano-de-acao-2026-2.pdf\`
+
+\`plano-aula-whatsapp-contatos.pdf\`
+
+\`modelo-presenca-fisica.docx\`
+
+\`modelo-presenca-online.md\`
+
+\`modelo-autorizacao-imagem.docx\`
+
+\`modelo-certificado.pptx\`
+
+**### Atualização da documentação**
+
+A documentação deverá ser revisada sempre que ocorrerem mudanças relevantes no projeto, principalmente alterações relacionadas a:
+
+\- datas ou locais das oficinas;
+
+\- comunidade atendida;
+
+\- metodologia;
+
+\- duração ou organização das aulas;
+
+\- conteúdos programáticos;
+
+\- indicadores;
+
+\- formas de registro de presença;
+
+\- cronograma;
+
+\- responsáveis pelas atividades.
+
+O README apresenta uma visão geral do Conecta 60+, enquanto informações operacionais mais detalhadas e sujeitas a alterações deverão permanecer nos documentos específicos disponíveis na pasta \`docs/\`.
+
+Os modelos poderão ser atualizados ao longo do desenvolvimento do projeto conforme as necessidades identificadas pela equipe e as orientações da disciplina.
+
+*>* **\*\*Privacidade:\*\*** *como este repositório é público, documentos preenchidos que contenham nomes, assinaturas, telefones, e-mails, respostas individuais de formulários, autorizações assinadas, certificados preenchidos ou outras informações pessoais dos participantes não devem ser disponibilizados no GitHub. O repositório deve armazenar apenas modelos sem dados pessoais e materiais apropriados para divulgação pública.*
 
 ## Como executar o protótipo
 
 Atualmente, o projeto utiliza **HTML, CSS e JavaScript**, sem necessidade de instalação de dependências.
 
-Para executar localmente:
+### Executar localmente
 
 1. Clone ou baixe este repositório;
 2. Abra a pasta do projeto;
@@ -238,7 +325,7 @@ Para executar localmente:
 Exemplo utilizando Git:
 
 ```bash
-git clone https://lettcmo03.github.io/Conecta60/
+git clone https://github.com/lettcmo03/Conecta60.git
 ```
 
 Depois, abra:
@@ -251,21 +338,52 @@ Quando uma versão pública estiver disponível, o link será adicionado nesta s
 
 ---
 
+## Indicadores da ação
+
+A ação extensionista atual será acompanhada por indicadores quantitativos e qualitativos, permitindo avaliar participação, execução das atividades e percepção das participantes.
+
+Os principais indicadores definidos são:
+
+- atender, no mínimo, **20 participantes**;
+- registrar a presença por meio de **lista em papel com assinatura** e também por **registro online**;
+- alcançar pelo menos **75% das participantes realizando as tarefas propostas durante as aulas**;
+- coletar pelo menos **5 depoimentos**, mediante consentimento;
+- registrar a quantidade de convidadas que não participaram, quando aplicável.
+
+A avaliação prática será realizada por meio da observação das participantes durante as atividades propostas ao final dos encontros.
+
+---
+
 ## Status do projeto
 
-**Em desenvolvimento — protótipo acadêmico.**
+O Conecta 60+ encontra-se em fase de desenvolvimento e preparação para a execução das oficinas presenciais.
 
-Atualmente estão sendo desenvolvidos e aprimorados:
+### Concluído ou definido
 
-* interface do site;
-* responsividade;
-* aula digital demonstrativa;
-* materiais pedagógicos;
-* documentação da ação de extensão;
-* definição do território/parceiro;
-* indicadores e forma de registro da participação.
+- definição do público da ação extensionista atual;
+- contato com a comunidade participante;
+- definição inicial da metodologia das aulas;
+- definição dos indicadores de acompanhamento;
+- definição das formas de registro de presença, com controle físico e online;
+- desenvolvimento inicial do protótipo web;
+- desenvolvimento da primeira aula digital demonstrativa.
 
-O protótipo não representa ainda um sistema completo de gestão de alunos ou plataforma de ensino em produção.
+### Em andamento
+
+- revisão e organização da documentação do projeto;
+- desenvolvimento dos materiais das aulas presenciais;
+- ampliação dos módulos e conteúdos do protótipo;
+- preparação dos modelos de uso de imagem, presença e certificado;
+- preparação das ações presenciais de outubro de 2026.
+
+### Próximas etapas
+
+- realização da primeira aula presencial em **04/10/2026**;
+- realização da segunda aula presencial em **11/10/2026**;
+- coleta das evidências das atividades;
+- análise dos resultados obtidos;
+- atualização da documentação após as oficinas;
+- continuidade do desenvolvimento do software educativo.
 
 ---
 
