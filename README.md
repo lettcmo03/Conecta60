@@ -179,23 +179,27 @@ A estrutura do projeto está organizada da seguinte forma:
 
 ```text
 docs/
+├── formularios/
+│ ├── formulario-cadastro-online.md
+│ └── formulario-presenca-online.md
+│
 ├── historico/
-│   └── plano-acao-rascunho.pdf
+│ └── plano-acao-rascunho.pdf
 │
 ├── materiais-de-aula/
-│   └── Aula 1 - Slide.pdf
+│ └── aula-1-slide.pdf
 │
 ├── modelos/
-│   ├── cadastro/
-│   │   └── forms
-│   ├── certificados/
-│   ├── presenca/
-│   │   └── Registro De Presença
-│   └── uso-de-imagem/
+│ ├── certificados/
+│ ├── presenca/
+│ └── uso-de-imagem/
+│ └── modelo-termo-consentimento.pdf
 │
 ├── planejamento/
+│ └── plano-de-acao-conecta-60+.pdf
+│
 ├── planos-de-aula/
-│   └── Módulo 1 — Primeiros contatos...
+│ └── modulo-1-primeiros-contatos-com-a-tecnologia.pdf
 │
 └── relatorios/
 ```
