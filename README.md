@@ -312,31 +312,43 @@ Os modelos poderão ser atualizados ao longo do desenvolvimento do projeto confo
 
 *>* **\*\*Privacidade:\*\*** *como este repositório é público, documentos preenchidos que contenham nomes, assinaturas, telefones, e-mails, respostas individuais de formulários, autorizações assinadas, certificados preenchidos ou outras informações pessoais dos participantes não devem ser disponibilizados no GitHub. O repositório deve armazenar apenas modelos sem dados pessoais e materiais apropriados para divulgação pública.*
 
-## Como executar o protótipo
+**## Como executar o protótipo**
 
-Atualmente, o projeto utiliza **HTML, CSS e JavaScript**, sem necessidade de instalação de dependências.
+Atualmente, o projeto utiliza **\*\*HTML, CSS e JavaScript\*\***, sem necessidade de instalação de dependências.
 
-### Executar localmente
+Para executar localmente:
 
-1. Clone ou baixe este repositório;
-2. Abra a pasta do projeto;
-3. Abra o arquivo `index.html` em um navegador.
+1\. Clone ou baixe este repositório;
+
+2\. Abra a pasta do projeto;
+
+3\. Abra o arquivo \`index.html\` em um navegador.
 
 Exemplo utilizando Git:
 
-```bash
+\`\`\`bash
 git clone https://github.com/lettcmo03/Conecta60.git
-```
+\`\`\`
 
-Depois, abra:
+Depois, acesse a pasta do projeto:
 
-```text
+\`\`\`bash
+cd Conecta60
+\`\`\`
+
+E abra o arquivo:
+
+\`\`\`text
 index.html
-```
+\`\`\`
 
-Quando uma versão pública estiver disponível, o link será adicionado nesta seção.
+**### Versão pública**
 
----
+O protótipo também está disponível online por meio do GitHub Pages:
+
+[https://lettcmo03.github.io/Conecta60/](https://lettcmo03.github.io/Conecta60/)
+
+\---
 
 ## Indicadores da ação
 
@@ -378,12 +390,14 @@ O Conecta 60+ encontra-se em fase de desenvolvimento e preparação para a execu
 
 ### Próximas etapas
 
-- realização da primeira aula presencial em **04/10/2026**;
-- realização da segunda aula presencial em **11/10/2026**;
-- coleta das evidências das atividades;
-- análise dos resultados obtidos;
-- atualização da documentação após as oficinas;
-- continuidade do desenvolvimento do software educativo.
+\- realização da primeira aula presencial em **\*\*04/10/2026\*\***;
+\- realização da segunda aula presencial em **\*\*11/10/2026\*\***;
+\- coleta das evidências das atividades;
+\- análise dos resultados obtidos;
+\- atualização da documentação após as oficinas;
+\- continuidade do desenvolvimento do software educativo.
+
+\* As datas previstas poderão ser alteradas mediante solicitação da patrocinadora do evento, inclusive sem aviso prévio.
 
 ---
 
