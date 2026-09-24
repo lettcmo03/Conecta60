@@ -16,9 +16,7 @@
             <a class="btn btn-entrar btn-apostila" href="assets/apostila-conecta-60-mais.pdf" target="_blank" rel="noopener">
                 Abrir apostila ↗
             </a>
-            <button class="btn btn-criar btn-em-breve">
-                Crie uma conta
-            </button>
+            <a class="btn btn-criar btn-interesse" href="https://docs.google.com/forms/d/e/1FAIpQLSd0mXlKhEu9IKoxv32r1_2p7N_KUk2ahSVDjLrgjqIA70IjZQ/viewform?usp=preview" target="_blank" rel="noopener">Cadastre-se ↗</a>
         </div>
     </header>
 
@@ -29,7 +27,7 @@
 
             <div class="menu-links" id="menuLinks">
                 <a href="#sobre">Sobre</a>
-                <a href="#aulas">Aulas</a>
+                <a href="#area-aulas">Aulas</a>
                 <a href="#ajuda">Ajuda</a>
             </div>
 
@@ -43,7 +41,6 @@
         <div class="banner-imagem">
             <img src="assets/img/aprendendo-audio-no-celular.jpg" alt="Pessoa idosa praticando o envio de áudio no celular">
         </div>
-            <button class="whatsapp-fixo btn-em-breve" type="button" aria-label="WhatsApp - funcionalidade em desenvolvimento">☎</button>
     </section>
 
     <!--Sobre-->
@@ -94,7 +91,7 @@
                 <h3>Quanto é para participar?</h3>
 
                 <p>É totalmente grátis!</p>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0mXlKhEu9IKoxv32r1_2p7N_KUk2ahSVDjLrgjqIA70IjZQ/viewform?usp=sharing&amp;ouid=102781921702828509444" class="btn-inscricao">SE INSCREVA JÁ</a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0mXlKhEu9IKoxv32r1_2p7N_KUk2ahSVDjLrgjqIA70IjZQ/viewform?usp=preview" target="_blank" rel="noopener" class="btn-inscricao">SE INSCREVA JÁ</a>
             </div>
         </div>
         <div class="aulas-baixo">
@@ -131,11 +128,16 @@
             Escolha um módulo para começar. As aulas usam a apostila da aula piloto e podem ser estudadas no seu próprio ritmo.
         </p>
     </div>
-    <div class="modulos-aulas">
-<article class="modulo-card modulo-disponivel"><div class="modulo-numero">Módulo 1</div><div class="modulo-conteudo"><p class="modulo-categoria">Noções básicas</p><h3>Celular e internet</h3><p class="modulo-descricao">Entenda os aplicativos, a conexão Wi-Fi, os dados móveis e o modo avião.</p><div class="lista-aulas-modulo"><div class="aula-item"><div class="aula-icone">1</div><div class="aula-info"><span>Aula 1</span><strong>Celular e internet</strong><small>Conteúdo da apostila</small></div><a href="celular-e-internet.html" class="btn-comecar-aula">Explorar assunto</a></div></div></div></article><article class="modulo-card modulo-disponivel"><div class="modulo-numero">Módulo 2</div><div class="modulo-conteudo"><p class="modulo-categoria">Comunicação digital</p><h3>WhatsApp</h3><p class="modulo-descricao">Aprenda a procurar e adicionar contatos, enviar áudio, foto e compartilhar contatos.</p><div class="lista-aulas-modulo"><div class="aula-item"><div class="aula-icone">1</div><div class="aula-info"><span>Aula 1</span><strong>WhatsApp</strong><small>Conteúdo da apostila</small></div><a href="whatsapp.html" class="btn-comecar-aula">Explorar assunto</a></div><div class="aula-item"><div class="aula-icone">2</div><div class="aula-info"><span>Aula prática</span><strong>Como adicionar um contato</strong><small>Exercício passo a passo</small></div><a href="aula-contato.html" class="btn-comecar-aula">Começar aula</a></div></div></div></article><article class="modulo-card modulo-disponivel"><div class="modulo-numero">Módulo 3</div><div class="modulo-conteudo"><p class="modulo-categoria">Proteja seus dados</p><h3>Segurança digital</h3><p class="modulo-descricao">Reconheça mensagens suspeitas, links, pedidos de códigos e cuidados com senhas.</p><div class="lista-aulas-modulo"><div class="aula-item"><div class="aula-icone">1</div><div class="aula-info"><span>Aula 1</span><strong>Segurança digital</strong><small>Conteúdo da apostila</small></div><a href="seguranca-digital.html" class="btn-comecar-aula">Explorar assunto</a></div></div></div></article><article class="modulo-card modulo-disponivel"><div class="modulo-numero">Módulo 4</div><div class="modulo-conteudo"><p class="modulo-categoria">Serviços digitais</p><h3>Banco e PIX</h3><p class="modulo-descricao">Saiba o que conferir antes de confirmar uma transferência pelo celular.</p><div class="lista-aulas-modulo"><div class="aula-item"><div class="aula-icone">1</div><div class="aula-info"><span>Aula 1</span><strong>Banco e PIX</strong><small>Conteúdo da apostila</small></div><a href="banco-e-pix.html" class="btn-comecar-aula">Explorar assunto</a></div></div></div></article><article class="modulo-card modulo-disponivel"><div class="modulo-numero">Módulo 5</div><div class="modulo-conteudo"><p class="modulo-categoria">Privacidade</p><h3>Redes sociais</h3><p class="modulo-descricao">Veja cuidados antes de publicar fotos e informações pessoais.</p><div class="lista-aulas-modulo"><div class="aula-item"><div class="aula-icone">1</div><div class="aula-info"><span>Aula 1</span><strong>Redes sociais</strong><small>Conteúdo da apostila</small></div><a href="redes-sociais.html" class="btn-comecar-aula">Explorar assunto</a></div></div></div></article>
+    <div class="modulos-aulas" id="listaModulos">
+<article class="modulo-card modulo-disponivel"><div class="modulo-numero">Módulo 1</div><div class="modulo-conteudo"><p class="modulo-categoria">Noções básicas</p><h3>Celular e internet</h3><p class="modulo-descricao">Entenda os aplicativos, a conexão Wi-Fi, os dados móveis e o modo avião.</p><div class="lista-aulas-modulo"><div class="aula-item"><div class="aula-icone">1</div><div class="aula-info"><span>Aula 1</span><strong>Celular e internet</strong><small>Conteúdo da apostila</small></div><a href="celular-e-internet.html" class="btn-comecar-aula">Explorar assunto</a></div></div></div></article><article class="modulo-card modulo-disponivel"><div class="modulo-numero">Módulo 2</div><div class="modulo-conteudo"><p class="modulo-categoria">Comunicação digital</p><h3>WhatsApp</h3><p class="modulo-descricao">Aprenda a procurar e adicionar contatos, enviar áudio, foto e compartilhar contatos.</p><div class="lista-aulas-modulo"><div class="aula-item"><div class="aula-icone">1</div><div class="aula-info"><span>Aula 1</span><strong>WhatsApp</strong><small>Conteúdo da apostila</small></div><a href="whatsapp.html" class="btn-comecar-aula">Explorar assunto</a></div></div></div></article><article class="modulo-card modulo-disponivel"><div class="modulo-numero">Módulo 3</div><div class="modulo-conteudo"><p class="modulo-categoria">Proteja seus dados</p><h3>Segurança digital</h3><p class="modulo-descricao">Reconheça mensagens suspeitas, links, pedidos de códigos e cuidados com senhas.</p><div class="lista-aulas-modulo"><div class="aula-item"><div class="aula-icone">1</div><div class="aula-info"><span>Aula 1</span><strong>Segurança digital</strong><small>Conteúdo da apostila</small></div><a href="seguranca-digital.html" class="btn-comecar-aula">Explorar assunto</a></div></div></div></article><article class="modulo-card modulo-disponivel"><div class="modulo-numero">Módulo 4</div><div class="modulo-conteudo"><p class="modulo-categoria">Serviços digitais</p><h3>Banco e PIX</h3><p class="modulo-descricao">Saiba o que conferir antes de confirmar uma transferência pelo celular.</p><div class="lista-aulas-modulo"><div class="aula-item"><div class="aula-icone">1</div><div class="aula-info"><span>Aula 1</span><strong>Banco e PIX</strong><small>Conteúdo da apostila</small></div><a href="banco-e-pix.html" class="btn-comecar-aula">Explorar assunto</a></div></div></div></article><article class="modulo-card modulo-disponivel"><div class="modulo-numero">Módulo 5</div><div class="modulo-conteudo"><p class="modulo-categoria">Privacidade</p><h3>Redes sociais</h3><p class="modulo-descricao">Veja cuidados antes de publicar fotos e informações pessoais.</p><div class="lista-aulas-modulo"><div class="aula-item"><div class="aula-icone">1</div><div class="aula-info"><span>Aula 1</span><strong>Redes sociais</strong><small>Conteúdo da apostila</small></div><a href="redes-sociais.html" class="btn-comecar-aula">Explorar assunto</a></div></div></div></article>
+    </div>
+    <div class="navegacao-modulos" aria-label="Navegação entre módulos">
+        <button class="seta-modulo" id="moduloAnterior" type="button" aria-label="Módulo anterior" aria-controls="listaModulos">← <span>Anterior</span></button>
+        <p class="contador-modulos" id="contadorModulos" aria-live="polite" aria-atomic="true"></p>
+        <button class="seta-modulo" id="moduloProximo" type="button" aria-label="Próximo módulo" aria-controls="listaModulos"><span>Próximo</span> →</button>
     </div>
     <p class="aviso-area-aulas">
-        Leia as aulas por aqui ou abra a apostila completa em PDF.
+        Leia as aulas por aqui ou <a href="assets/apostila-conecta-60-mais.pdf" target="_blank" rel="noopener">abra a apostila completa em PDF ↗</a>.
     </p>
 </section>
 
