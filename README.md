@@ -50,8 +50,8 @@ Atualmente, o MVP é composto por:
 
 1. **página inicial responsiva** apresentando o projeto;
 2. **área de módulos e aulas digitais**;
-3. **primeira aula demonstrativa**, ensinando como adicionar um contato para utilização no WhatsApp;
-4. **fluxo demonstrativo de interesse/contato**.
+3. **cinco módulos da apostila** em páginas próprias e uma aula prática de como adicionar um contato;
+4. **fluxo demonstrativo de interesse**, sem envio de dados.
 
 Nesta etapa, o sistema ainda não possui autenticação, área individual do aluno ou banco de dados.
 
@@ -192,3 +192,8 @@ Consulte o arquivo [`LICENSE`](LICENSE) para mais informações.
 ---
 
 **Conecta 60+ — Tecnologia que aproxima, ensina e conecta.**
+
+
+## Aulas e apostila (atualização)
+
+A página inicial apresenta cinco módulos, cada um com uma página HTML própria: `celular-e-internet.html`, `whatsapp.html`, `seguranca-digital.html`, `banco-e-pix.html` e `redes-sociais.html`. A aula prática original `aula-contato.html` permanece disponível no módulo WhatsApp. O PDF fica em `assets/apostila-conecta-60-mais.pdf`. Todos os HTML usam `assets/css/style.css` e o cabeçalho/rodapé com acesso à apostila. As duas fotos da página inicial são arquivos locais em `assets/img/`. Abra `index.html` para testar; não há necessidade de `npm install`.
