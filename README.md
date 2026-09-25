@@ -199,3 +199,5 @@ Consulte o arquivo [`LICENSE`](LICENSE) para mais informações.
 A página inicial apresenta um módulo por vez, com setas para avançar e voltar entre cinco módulos, cada um com uma página HTML própria: `celular-e-internet.html`, `whatsapp.html`, `seguranca-digital.html`, `banco-e-pix.html` e `redes-sociais.html`. O PDF fica em `assets/apostila-conecta-60-mais.pdf`. Todos os HTML usam `assets/css/style.css` e o cabeçalho/rodapé com acesso à apostila. As duas fotos da página inicial são arquivos locais em `assets/img/`. Abra `index.html` para testar; não há necessidade de `npm install`.
 
 As cinco páginas de aula incluem uma atividade **Agora vamos praticar** com três opções de resposta. A escolha aparece na tela e não é enviada nem armazenada. O cabeçalho liga à área de módulos, ao formulário de cadastro externo e à apostila.
+
+Cada página de módulo tem links para a anterior e a próxima no começo e no fim; os controles finais são mais compactos. No primeiro e no último módulo, a direção que não existe aparece indisponível.
