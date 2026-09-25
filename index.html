@@ -11,19 +11,12 @@
 <body>
 <!--cabecario-->
     <header class="cabecalho">
-        <div class="logo-area">
-            <img src="assets/img/logo.jpg" alt="Logo Conecta 60+" class="logo-img">
-            <h1 class="logo-texto">
-                Conecta <span>60+</span>
-            </h1>
-        </div>
+        <div class="logo-area"><a href="index.html" aria-label="Conecta 60+, página inicial"><img src="assets/img/logo-conecta-60-mais.png" alt="Conecta 60+" class="logo-img"></a></div>
         <div class="botoes-topo">
-            <button class="btn btn-entrar btn-em-breve">
-                Entrar
-            </button>
-            <button class="btn btn-criar btn-em-breve">
-                Crie uma conta
-            </button>
+            <a class="btn btn-entrar btn-apostila" href="assets/apostila-conecta-60-mais.pdf" target="_blank" rel="noopener">
+                Abrir apostila ↗
+            </a>
+            <a class="btn btn-criar btn-interesse" href="https://docs.google.com/forms/d/e/1FAIpQLSd0mXlKhEu9IKoxv32r1_2p7N_KUk2ahSVDjLrgjqIA70IjZQ/viewform?usp=preview" target="_blank" rel="noopener">Cadastre-se ↗</a>
         </div>
     </header>
 
@@ -34,8 +27,7 @@
 
             <div class="menu-links" id="menuLinks">
                 <a href="#sobre">Sobre</a>
-                <a href="#aulas">Aulas</a>
-                <a href="#contato">Contato</a>
+                <a href="#area-aulas">Aulas</a>
                 <a href="#ajuda">Ajuda</a>
             </div>
 
@@ -47,15 +39,14 @@
             <a href="#sobre" class="btn-saiba-mais">Saiba mais</a>
         </div>
         <div class="banner-imagem">
-            <img src="assets/img/imagem1.png" alt="Idosos aprendendo computação com instrutora">
+            <img src="assets/img/aprendendo-audio-no-celular.jpg" alt="Pessoa idosa praticando o envio de áudio no celular">
         </div>
-            <button class="whatsapp-fixo btn-em-breve" type="button" aria-label="WhatsApp - funcionalidade em desenvolvimento">☎</button>
     </section>
 
     <!--Sobre-->
     <section class="proposta" id="sobre">
         <div class="proposta-imagem">
-            <img src="assets/img/logo.jpg" alt="Símbolo Conecta 60+">
+            <img src="assets/img/conferindo-pix-com-calma.jpg" alt="Casal de idosos conferindo os dados antes de um PIX">
         </div>
         <div class="proposta-texto">
             <h2>Qual é a nossa proposta?</h2>
@@ -100,8 +91,7 @@
                 <h3>Quanto é para participar?</h3>
 
                 <p>É totalmente grátis!</p>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0mXlKhEu9IKoxv32r1_2p7N_KUk2ahSVDjLrgjqIA70IjZQ/viewform?usp=sharing&ouid=102781921702828509444
-" class="btn-inscricao">SE INSCREVA JÁ</a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0mXlKhEu9IKoxv32r1_2p7N_KUk2ahSVDjLrgjqIA70IjZQ/viewform?usp=preview" target="_blank" rel="noopener" class="btn-inscricao">SE INSCREVA JÁ</a>
             </div>
         </div>
         <div class="aulas-baixo">
@@ -135,55 +125,19 @@
         <span class="area-aulas-etiqueta">Área de aprendizado</span>
         <h2>Aulas Online</h2>
         <p>
-            Escolha um módulo para começar. As aulas serão organizadas em etapas curtas,
-            com explicações simples e atividades práticas.
+            Escolha um módulo para começar. As aulas usam a apostila da aula piloto e podem ser estudadas no seu próprio ritmo.
         </p>
     </div>
-    <div class="modulos-aulas">
-        <article class="modulo-card modulo-disponivel">
-            <div class="modulo-numero">
-                Módulo 2
-            </div>
-            <div class="modulo-conteudo">
-                <div class="modulo-topo">
-                    <div>
-                        <p class="modulo-categoria">
-                            Comunicação digital
-                        </p>
-                        <h3>
-                            Aprendendo a usar o WhatsApp
-                        </h3>
-                    </div>
-                    <span class="modulo-status">
-                        Em desenvolvimento
-                    </span>
-                </div>
-                <p class="modulo-descricao">
-                    Neste módulo você aprenderá funções importantes do WhatsApp de forma
-                    simples, segura e no seu próprio ritmo.
-                </p>
-                <div class="lista-aulas-modulo">
-                    <div class="aula-item">
-                        <div class="aula-icone">
-                            1
-                        </div>
-                        <div class="aula-info">
-                            <span>Aula 1</span>
-                            <strong>
-                                Como adicionar um contato no WhatsApp
-                            </strong>
-                            <small>
-                                Primeira aula do protótipo
-                            </small>
-                        </div>
-                        <a href="aula-contato.html" class="btn-comecar-aula"> Começar aula </a>
-                    </div>
-                </div>
-            </div>
-        </article>
+    <div class="modulos-aulas" id="listaModulos">
+<article class="modulo-card modulo-disponivel"><div class="modulo-numero">Módulo 1</div><div class="modulo-conteudo"><p class="modulo-categoria">Noções básicas</p><h3>Celular e internet</h3><p class="modulo-descricao">Entenda os aplicativos, a conexão Wi-Fi, os dados móveis e o modo avião.</p><div class="lista-aulas-modulo"><div class="aula-item"><div class="aula-icone">1</div><div class="aula-info"><span>Aula 1</span><strong>Celular e internet</strong><small>Conteúdo da apostila</small></div><a href="celular-e-internet.html" class="btn-comecar-aula">Explorar assunto</a></div></div></div></article><article class="modulo-card modulo-disponivel"><div class="modulo-numero">Módulo 2</div><div class="modulo-conteudo"><p class="modulo-categoria">Comunicação digital</p><h3>WhatsApp</h3><p class="modulo-descricao">Aprenda a procurar e adicionar contatos, enviar áudio, foto e compartilhar contatos.</p><div class="lista-aulas-modulo"><div class="aula-item"><div class="aula-icone">1</div><div class="aula-info"><span>Aula 1</span><strong>WhatsApp</strong><small>Conteúdo da apostila</small></div><a href="whatsapp.html" class="btn-comecar-aula">Explorar assunto</a></div></div></div></article><article class="modulo-card modulo-disponivel"><div class="modulo-numero">Módulo 3</div><div class="modulo-conteudo"><p class="modulo-categoria">Proteja seus dados</p><h3>Segurança digital</h3><p class="modulo-descricao">Reconheça mensagens suspeitas, links, pedidos de códigos e cuidados com senhas.</p><div class="lista-aulas-modulo"><div class="aula-item"><div class="aula-icone">1</div><div class="aula-info"><span>Aula 1</span><strong>Segurança digital</strong><small>Conteúdo da apostila</small></div><a href="seguranca-digital.html" class="btn-comecar-aula">Explorar assunto</a></div></div></div></article><article class="modulo-card modulo-disponivel"><div class="modulo-numero">Módulo 4</div><div class="modulo-conteudo"><p class="modulo-categoria">Serviços digitais</p><h3>Banco e PIX</h3><p class="modulo-descricao">Saiba o que conferir antes de confirmar uma transferência pelo celular.</p><div class="lista-aulas-modulo"><div class="aula-item"><div class="aula-icone">1</div><div class="aula-info"><span>Aula 1</span><strong>Banco e PIX</strong><small>Conteúdo da apostila</small></div><a href="banco-e-pix.html" class="btn-comecar-aula">Explorar assunto</a></div></div></div></article><article class="modulo-card modulo-disponivel"><div class="modulo-numero">Módulo 5</div><div class="modulo-conteudo"><p class="modulo-categoria">Privacidade</p><h3>Redes sociais</h3><p class="modulo-descricao">Veja cuidados antes de publicar fotos e informações pessoais.</p><div class="lista-aulas-modulo"><div class="aula-item"><div class="aula-icone">1</div><div class="aula-info"><span>Aula 1</span><strong>Redes sociais</strong><small>Conteúdo da apostila</small></div><a href="redes-sociais.html" class="btn-comecar-aula">Explorar assunto</a></div></div></div></article>
+        <div class="navegacao-modulos" aria-label="Navegação entre módulos">
+        <button class="seta-modulo" id="moduloAnterior" type="button" aria-label="Módulo anterior" aria-controls="listaModulos">← <span>Anterior</span></button>
+        <p class="contador-modulos" id="contadorModulos" aria-live="polite" aria-atomic="true"></p>
+        <button class="seta-modulo" id="moduloProximo" type="button" aria-label="Próximo módulo" aria-controls="listaModulos"><span>Próximo</span> →</button>
+        </div>
     </div>
     <p class="aviso-area-aulas">
-        Novas aulas serão adicionadas aqui conforme o desenvolvimento e os testes do projeto.
+        Leia as aulas por aqui ou <a href="assets/apostila-conecta-60-mais.pdf" target="_blank" rel="noopener">abra a apostila completa em PDF ↗</a>.
     </p>
 </section>
 
@@ -239,38 +193,8 @@
         </div>
     </section>
 
-<!--parte dos Contatos-->
-    <section class="contato" id="contato">
-        <div class="contato-caixa">
-            <div class="contato-info">
-                <h2>Contato</h2>
-
-                <p>
-                    Os canais oficiais de contato do Conecta60
-                    ainda estão sendo definidos.
-                </p>
-
-                <p>
-                    <strong>Em breve.</strong>
-                </p>
-            </div>
-            <div class="redes-info">
-                <h2>Nossas Redes</h2>
-                <div class="botoes-redes">
-                    <button type="button" class="btn-em-breve">Facebook</button>
-                    <button type="button" class="btn-em-breve">Instagram</button>
-                </div>
-            </div>
-        </div>
-    </section>
-<!-- pérroda -->
-<footer class="rodape">
-    <div class="rodape-logo">
-        <img src="assets/img/logo.jpg" alt="Logo Conecta 60+">
-        <h2>Conecta <span>60+</span></h2>
-    </div>
-    <p>Copyright © 2026 Conecta 60+. All rights reserved</p>
-</footer>
+<!-- Rodapé -->
+<footer class="site-footer"><div class="footer-inner"><div class="footer-brand"><a class="footer-logo" href="index.html" aria-label="Conecta 60+, início"><img src="assets/img/logo-conecta-60-mais.png" alt="Conecta 60+"></a><p>Tecnologia com mais autonomia e segurança.</p></div><nav aria-label="Navegação do rodapé"><a href="index.html#area-aulas">Assuntos</a><a href="index.html#ajuda">Como estudar</a><a href="index.html#sobre">Quem somos</a><a href="assets/apostila-conecta-60-mais.pdf" target="_blank" rel="noopener">Abrir apostila (PDF) ↗</a></nav></div></footer>
 
 <!--javascripito-->
 <script src="assets/js/script.js"></script>
