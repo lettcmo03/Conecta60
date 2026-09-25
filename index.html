@@ -1,107 +1,203 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0e7280">
-  <meta name="description" content="Conecta 60+: aprenda a usar o celular e a internet no seu ritmo, com orientações simples e uma apostila gratuita.">
-  <title>Conecta 60+ | Aprenda tecnologia no seu ritmo</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta 60+</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand brand-logo" href="#inicio" aria-label="Conecta 60+, início"><img src="assets/logo-conecta-60-mais.png" alt="Conecta 60+" width="192" height="176"></a>
-      <nav aria-label="Navegação principal">
-        <a href="#assuntos">Assuntos</a>
-        <a href="#como-usar">Como estudar</a>
-        <a href="#quem-somos">Quem somos</a>
-        <a href="#contatos">Contatos</a>
-        <a class="header-book" href="assets/apostila-conecta-60-mais.pdf" target="_blank" rel="noopener" aria-label="Abrir apostila em PDF, nova aba">Abrir apostila <span aria-hidden="true">↗</span></a>
-      </nav>
+<!--cabecario-->
+    <header class="cabecalho">
+        <div class="logo-area"><a href="index.html" aria-label="Conecta 60+, página inicial"><img src="assets/img/logo-conecta-60-mais.png" alt="Conecta 60+" class="logo-img"></a></div>
+        <div class="botoes-topo">
+            <a class="btn btn-entrar btn-apostila" href="assets/apostila-conecta-60-mais.pdf" target="_blank" rel="noopener">
+                Abrir apostila ↗
+            </a>
+            <a class="btn btn-criar btn-interesse" href="https://docs.google.com/forms/d/e/1FAIpQLSd0mXlKhEu9IKoxv32r1_2p7N_KUk2ahSVDjLrgjqIA70IjZQ/viewform?usp=preview" target="_blank" rel="noopener">Cadastre-se ↗</a>
+        </div>
+    </header>
+
+<!-- menu -->
+        <nav class="menu">
+
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+            <div class="menu-links" id="menuLinks">
+                <a href="#sobre">Sobre</a>
+                <a href="#area-aulas">Aulas</a>
+                <a href="#ajuda">Ajuda</a>
+            </div>
+
+        </nav>
+<!--banner-->
+    <section class="banner">
+        <div class="banner-texto">
+            <h2>A tecnologia ao seu alcance, na sua melhor idade.</h2>
+            <a href="#sobre" class="btn-saiba-mais">Saiba mais</a>
+        </div>
+        <div class="banner-imagem">
+            <img src="assets/img/aprendendo-audio-no-celular.jpg" alt="Pessoa idosa praticando o envio de áudio no celular">
+        </div>
+    </section>
+
+    <!--Sobre-->
+    <section class="proposta" id="sobre">
+        <div class="proposta-imagem">
+            <img src="assets/img/conferindo-pix-com-calma.jpg" alt="Casal de idosos conferindo os dados antes de um PIX">
+        </div>
+        <div class="proposta-texto">
+            <h2>Qual é a nossa proposta?</h2>
+            <p>
+                Você se sente um pouco perdido com <strong>smartphones, tablets ou computadores?</strong>
+                Acha que a tecnologia é complicada e que não é para você? Pode ficar tranquilo!
+            </p>
+            <p>
+                Aqui, oferecemos um ambiente acolhedor e um aprendizado feito sob medida
+                para quem quer superar o medo e as dificuldades com aparelhos eletrônicos.
+            </p>
+            <p>
+                Vamos, juntos, simplificar a tecnologia e mostrar como ela pode ser sua aliada
+                no dia a dia.
+            </p>
+            <a href="#area-aulas" class="btn-aprender">Venha aprender</a>
+        </div>
+    </section>
+
+    <!--Aulas-->
+    <section class="aulas" id="aulas">
+        <h2 class="titulo-aulas">Nossas Aulas</h2>
+        <div class="aulas-linha">
+            <div class="card-presencial">
+                <div class="card-conteudo">
+                    <h3>Modelo Presencial</h3>
+
+                    <p>É a oportunidade perfeita para você aprender lado a lado com nossos instrutores, tirar dúvidas na hora e interagir com outros alunos.</p>
+
+                    <p>O ambiente é acolhedor e dinâmico, feito para que você se sinta à vontade para explorar cada ferramenta e funcionalidade.</p>
+                </div>
+            </div>
+            <div class="info-aulas">
+                <h3>Onde estamos?</h3>
+
+                <p>Ainda não temos um espaço físico, mas planejamos nos situar perto da praça do Bem Estar!</p>
+
+                <h3>Quando as aulas acontecem?</h3>
+
+                <p>As oficinas estão sendo planejadas para acontecer duas vezes por semana, com aproximadamente 2 horas de duração por encontro. Os dias e horários serão divulgados após a definição do local parceiro.</p>
+
+                <h3>Quanto é para participar?</h3>
+
+                <p>É totalmente grátis!</p>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0mXlKhEu9IKoxv32r1_2p7N_KUk2ahSVDjLrgjqIA70IjZQ/viewform?usp=preview" target="_blank" rel="noopener" class="btn-inscricao">SE INSCREVA JÁ</a>
+            </div>
+        </div>
+        <div class="aulas-baixo">
+        <div class="acesso-aulas" id="ajuda">
+            <h3>Como ter acesso às aulas?</h3>
+
+            <p>Durante a fase de protótipo, não é necessário criar uma conta. Basta acessar a área de aprendizado e escolher uma das aulas disponíveis.</p>
+
+            <h3>Se precisar de ajuda?</h3>
+
+            <p>Os canais de atendimento do Conecta60 ainda estão sendo definidos. Em breve, você poderá entrar em contato com a equipe diretamente pelo site.</p>
+            <a href="#area-aulas" class="btn-acessar-aulas">
+                ACESSAR AULAS
+            </a>
+        </div>
+            <div class="card-online">
+                <div class="online-conteudo">
+                    <h3>Modelo Online</h3>
+
+                    <p>Com nossas aulas online, a tecnologia chega até você, no conforto do seu lar. É a solução perfeita para aprender no seu próprio ritmo, sem precisar sair de casa.</p>
+
+                    <p>Você terá acesso a um conteúdo pensado para o seu aprendizado, com a flexibilidade de assistir às aulas onde e quando for mais conveniente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- AULAS -->
+<section class="area-aulas-online" id="area-aulas">
+    <div class="area-aulas-cabecalho">
+        <span class="area-aulas-etiqueta">Área de aprendizado</span>
+        <h2>Aulas Online</h2>
+        <p>
+            Escolha um módulo para começar. As aulas usam a apostila da aula piloto e podem ser estudadas no seu próprio ritmo.
+        </p>
     </div>
-  </header>
-  <main id="conteudo">
-    <section id="inicio" class="hero container" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow">TECNOLOGIA COM MAIS AUTONOMIA E SEGURANÇA</p>
-        <h1 id="hero-title">Aprender a usar a internet pode ser mais simples.</h1>
-        <p class="intro">Aqui você encontra assuntos do dia a dia explicados com calma. Escolha um tema para começar e consulte a apostila sempre que precisar.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#assuntos">Ver os assuntos <span aria-hidden="true">↓</span></a>
-          <a class="button secondary" href="assets/apostila-conecta-60-mais.pdf" target="_blank" rel="noopener">Ler a apostila (PDF) <span aria-hidden="true">↗</span></a>
+    <div class="modulos-aulas" id="listaModulos">
+<article class="modulo-card modulo-disponivel"><div class="modulo-numero">Módulo 1</div><div class="modulo-conteudo"><p class="modulo-categoria">Noções básicas</p><h3>Celular e internet</h3><p class="modulo-descricao">Entenda os aplicativos, a conexão Wi-Fi, os dados móveis e o modo avião.</p><div class="lista-aulas-modulo"><div class="aula-item"><div class="aula-icone">1</div><div class="aula-info"><span>Aula 1</span><strong>Celular e internet</strong><small>Conteúdo da apostila</small></div><a href="celular-e-internet.html" class="btn-comecar-aula">Explorar assunto</a></div></div></div></article><article class="modulo-card modulo-disponivel"><div class="modulo-numero">Módulo 2</div><div class="modulo-conteudo"><p class="modulo-categoria">Comunicação digital</p><h3>WhatsApp</h3><p class="modulo-descricao">Aprenda a procurar e adicionar contatos, enviar áudio, foto e compartilhar contatos.</p><div class="lista-aulas-modulo"><div class="aula-item"><div class="aula-icone">1</div><div class="aula-info"><span>Aula 1</span><strong>WhatsApp</strong><small>Conteúdo da apostila</small></div><a href="whatsapp.html" class="btn-comecar-aula">Explorar assunto</a></div></div></div></article><article class="modulo-card modulo-disponivel"><div class="modulo-numero">Módulo 3</div><div class="modulo-conteudo"><p class="modulo-categoria">Proteja seus dados</p><h3>Segurança digital</h3><p class="modulo-descricao">Reconheça mensagens suspeitas, links, pedidos de códigos e cuidados com senhas.</p><div class="lista-aulas-modulo"><div class="aula-item"><div class="aula-icone">1</div><div class="aula-info"><span>Aula 1</span><strong>Segurança digital</strong><small>Conteúdo da apostila</small></div><a href="seguranca-digital.html" class="btn-comecar-aula">Explorar assunto</a></div></div></div></article><article class="modulo-card modulo-disponivel"><div class="modulo-numero">Módulo 4</div><div class="modulo-conteudo"><p class="modulo-categoria">Serviços digitais</p><h3>Banco e PIX</h3><p class="modulo-descricao">Saiba o que conferir antes de confirmar uma transferência pelo celular.</p><div class="lista-aulas-modulo"><div class="aula-item"><div class="aula-icone">1</div><div class="aula-info"><span>Aula 1</span><strong>Banco e PIX</strong><small>Conteúdo da apostila</small></div><a href="banco-e-pix.html" class="btn-comecar-aula">Explorar assunto</a></div></div></div></article><article class="modulo-card modulo-disponivel"><div class="modulo-numero">Módulo 5</div><div class="modulo-conteudo"><p class="modulo-categoria">Privacidade</p><h3>Redes sociais</h3><p class="modulo-descricao">Veja cuidados antes de publicar fotos e informações pessoais.</p><div class="lista-aulas-modulo"><div class="aula-item"><div class="aula-icone">1</div><div class="aula-info"><span>Aula 1</span><strong>Redes sociais</strong><small>Conteúdo da apostila</small></div><a href="redes-sociais.html" class="btn-comecar-aula">Explorar assunto</a></div></div></div></article>
+        <div class="navegacao-modulos" aria-label="Navegação entre módulos">
+        <button class="seta-modulo" id="moduloAnterior" type="button" aria-label="Módulo anterior" aria-controls="listaModulos">← <span>Anterior</span></button>
+        <p class="contador-modulos" id="contadorModulos" aria-live="polite" aria-atomic="true"></p>
+        <button class="seta-modulo" id="moduloProximo" type="button" aria-label="Próximo módulo" aria-controls="listaModulos"><span>Próximo</span> →</button>
         </div>
-      </div>
-      <figure class="hero-visual">
-        <img src="assets/aprendendo-audio-no-celular.jpg" width="1280" height="853" alt="Mulher idosa praticando o envio de um áudio no celular, acompanhada por outro aluno" fetchpriority="high">
-        <figcaption>Aprenda com calma e pratique no seu ritmo.</figcaption>
-      </figure>
-    </section>
-    <section id="assuntos" class="topics-section" aria-labelledby="topics-title">
-      <div class="container">
-        <div class="section-heading"><p class="eyebrow">POR ONDE COMEÇAR</p><h2 id="topics-title">Escolha um assunto</h2><p>Os temas abaixo fazem parte da apostila. Toque em um deles para ver um resumo e abrir a página correspondente.</p></div>
-        <div class="topic-grid">
-          <article class="topic-card"><span class="topic-num">01</span><h3>Celular e internet</h3><p>Entenda o que são aplicativos, Wi-Fi e dados móveis.</p><button type="button" class="topic-button" data-topic="internet">Explorar assunto <span aria-hidden="true">→</span></button></article>
-          <article class="topic-card"><span class="topic-num">02</span><h3>WhatsApp</h3><p>Aprenda a procurar contatos e enviar áudio, foto e contato.</p><button type="button" class="topic-button" data-topic="whatsapp">Explorar assunto <span aria-hidden="true">→</span></button></article>
-          <article class="topic-card"><span class="topic-num">03</span><h3>Segurança digital</h3><p>Reconheça mensagens suspeitas e cuide das suas senhas.</p><button type="button" class="topic-button" data-topic="seguranca">Explorar assunto <span aria-hidden="true">→</span></button></article>
-          <article class="topic-card"><span class="topic-num">04</span><h3>Banco e PIX</h3><p>Veja o que conferir antes de confirmar uma operação.</p><button type="button" class="topic-button" data-topic="pix">Explorar assunto <span aria-hidden="true">→</span></button></article>
-          <article class="topic-card"><span class="topic-num">05</span><h3>Redes sociais</h3><p>Conheça cuidados ao compartilhar informações e fotos.</p><button type="button" class="topic-button" data-topic="redes">Explorar assunto <span aria-hidden="true">→</span></button></article>
-        </div>
-        <section class="lesson" id="aula" aria-live="polite" aria-labelledby="lesson-title" hidden>
-          <div class="lesson-top"><span class="lesson-label">RESUMO DO ASSUNTO</span><button type="button" id="close-lesson" aria-label="Fechar resumo">Fechar ×</button></div>
-          <h3 id="lesson-title"></h3><p id="lesson-copy"></p><a id="lesson-link" class="button primary" href="#" target="_blank" rel="noopener">Abrir na apostila <span aria-hidden="true">↗</span></a>
-        </section>
-      </div>
-    </section>
-    <section id="como-usar" class="study-section container" aria-labelledby="study-title"><div><p class="eyebrow">NO SEU RITMO</p><h2 id="study-title">Como estudar por aqui</h2><p>Comece pelo assunto que mais precisa hoje. Leia o resumo, abra a apostila e experimente os passos no seu próprio celular. Se tiver dúvida, volte quantas vezes quiser.</p></div><div class="study-side"><div class="study-steps"><div><span>1</span><p>Escolha um assunto.</p></div><div><span>2</span><p>Abra a página da apostila.</p></div><div><span>3</span><p>Pratique com calma.</p></div></div><figure class="study-photo"><img src="assets/conferindo-pix-com-calma.jpg" width="1280" height="853" alt="Casal de idosos conferindo os dados no celular e fazendo anotações antes de um PIX" loading="lazy"><figcaption>Antes de confirmar um PIX, confira os dados com atenção.</figcaption></figure></div></section>
-    <section id="quem-somos" class="about-section" aria-labelledby="about-title">
-      <div class="container about-grid">
-        <div class="about-copy">
-          <p class="eyebrow">O PROJETO</p>
-          <h2 id="about-title">Quem somos</h2>
-          <p>O Conecta 60+ é um projeto dedicado a ajudar pessoas a aprender a usar a tecnologia com confiança e no próprio ritmo.</p>
-          <h3>Nosso objetivo</h3>
-          <p>Promover a inclusão digital de idosos e pessoas em situação de analfabetismo digital, oferecendo capacitação tecnológica acessível, segura e humanizada.</p>
-        </div>
-        <div class="team-card">
-          <h3>Integrantes</h3>
-          <ul class="team-list">
-            <li>Antônio de Oliveira</li>
-            <li>Eduardo Lima</li>
-            <li>João Gabriel</li>
-            <li>João Pedro</li>
-            <li>Letícia de Carvalho</li>
-            <li>Vinicios de Souza</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section class="book-section"><div class="container book-inner"><div><p class="eyebrow">MATERIAL DE APOIO</p><h2>Sua apostila sempre à mão.</h2><p>O PDF da aula piloto tem 15 páginas para ler no celular ou no computador. Você também pode salvar ou imprimir.</p></div><a class="button book-button" href="assets/apostila-conecta-60-mais.pdf" target="_blank" rel="noopener">Abrir a apostila completa <span aria-hidden="true">↗</span></a></div></section>
-  </main>
-  <footer id="contatos" class="site-footer" aria-labelledby="footer-contact-title">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a class="brand brand-logo" href="#inicio" aria-label="Conecta 60+, início"><img src="assets/logo-conecta-60-mais.png" alt="Conecta 60+" width="192" height="176"></a>
-        <p>Tecnologia com mais autonomia e segurança.</p>
-      </div>
-      <nav aria-label="Navegação do rodapé">
-        <a href="#assuntos">Assuntos</a>
-        <a href="#como-usar">Como estudar</a>
-        <a href="#quem-somos">Quem somos</a>
-        <a href="assets/apostila-conecta-60-mais.pdf" target="_blank" rel="noopener">Abrir apostila (PDF) ↗</a>
-      </nav>
-      <div class="footer-contact">
-        <h2 id="footer-contact-title">Contatos</h2>
-        <dl>
-          <div><dt>E-mail</dt><dd><a href="mailto:conetca60+@gmail.com">conetca60+@gmail.com</a></dd></div>
-          <div><dt>Telefone</dt><dd><a href="tel:+552225778870">(22) 2577-8870</a></dd></div>
-          <div><dt>CNPJ</dt><dd>96.737.588/0001-30</dd></div>
-          <div><dt>Endereço</dt><dd>Av. Saquarema, 123</dd></div>
-        </dl>
-      </div>
     </div>
-  </footer>
+    <p class="aviso-area-aulas">
+        Leia as aulas por aqui ou <a href="assets/apostila-conecta-60-mais.pdf" target="_blank" rel="noopener">abra a apostila completa em PDF ↗</a>.
+    </p>
+</section>
+
+    <!-- formulario -->
+    <section class="formulario-interesse" id="interesse">
+        <div class="formulario-caixa">
+            <div class="formulario-texto">
+                <h2>Tenho interesse no Conecta60</h2>
+
+                <p>Esta área demonstra como será realizado o registro de interesse dos participantes.</p>
+                <p><strong>Funcionalidade em desenvolvimento: Os dados ainda não são enviados à equipe.</strong></p>
+            </div>
+            <form class="formulario-campos" id="formInteresse">
+                <div class="grupo-campo">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome" required>
+                </div>
+                <div class="linha-campos">
+                    <div class="grupo-campo">
+                        <label for="telefone">WhatsApp</label>
+                        <input type="tel" id="telefone" placeholder="(22) 99999-9999" required>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="seuemail@email.com">
+                    </div>
+                </div>
+                <div class="grupo-campo">
+                    <label for="modalidade">Modalidade de interesse</label>
+                    <select id="modalidade" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="Presencial">Modelo Presencial</option>
+                        <option value="Online">Modelo Online</option>
+                        <option value="Presencial e Online">Presencial e Online</option>
+                    </select>
+                </div>
+                <div class="grupo-campo">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" placeholder="Escreva sua mensagem ou dúvida"></textarea>
+                </div>
+                <div class="grupo-campo">
+                    <label>
+                        <input type="checkbox" id="consentimento" required>
+                        Estou ciente de que este formulário faz parte de um
+                        protótipo acadêmico e que os dados ainda não serão enviados.
+                    </label>
+                </div>
+                <button type="submit" class="btn-enviar-formulario">
+                    Enviar interesse
+                </button>
+                <p class="mensagem-form" id="mensagemForm"></p>
+            </form>
+        </div>
+    </section>
+
+<!-- Rodapé -->
+<footer class="site-footer"><div class="footer-inner"><div class="footer-brand"><a class="footer-logo" href="index.html" aria-label="Conecta 60+, início"><img src="assets/img/logo-conecta-60-mais.png" alt="Conecta 60+"></a><p>Tecnologia com mais autonomia e segurança.</p></div><nav aria-label="Navegação do rodapé"><a href="index.html#area-aulas">Assuntos</a><a href="index.html#ajuda">Como estudar</a><a href="index.html#sobre">Quem somos</a><a href="assets/apostila-conecta-60-mais.pdf" target="_blank" rel="noopener">Abrir apostila (PDF) ↗</a></nav></div></footer>
+
+<!--javascripito-->
+<script src="assets/js/script.js"></script>
+
 </body>
 </html>
