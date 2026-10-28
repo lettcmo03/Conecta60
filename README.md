@@ -49,8 +49,8 @@ Os conteúdos poderão ser adaptados conforme as necessidades dos participantes.
 Atualmente, o MVP é composto por:
 
 1. **página inicial responsiva** apresentando o projeto;
-2. **área de módulos e aulas digitais**;
-3. **cinco módulos da apostila** em páginas próprias;
+2. **quiz de tecnologia** com 15 situações do cotidiano;
+3. **resumo das respostas** com integração de envio por e-mail;
 4. **fluxo demonstrativo de interesse**, sem envio de dados.
 
 Nesta etapa, o sistema ainda não possui autenticação, área individual do aluno ou banco de dados.
@@ -194,10 +194,77 @@ Consulte o arquivo [`LICENSE`](LICENSE) para mais informações.
 **Conecta 60+ — Tecnologia que aproxima, ensina e conecta.**
 
 
-## Aulas e apostila (atualização)
+## Atividade atual e materiais anteriores
 
-A página inicial apresenta um módulo por vez, com setas para avançar e voltar entre cinco módulos, cada um com uma página HTML própria: `celular-e-internet.html`, `whatsapp.html`, `seguranca-digital.html`, `banco-e-pix.html` e `redes-sociais.html`. O PDF fica em `assets/apostila-conecta-60-mais.pdf`. Todos os HTML usam `assets/css/style.css` e o cabeçalho/rodapé com acesso à apostila. As duas fotos da página inicial são arquivos locais em `assets/img/`. Abra `index.html` para testar; não há necessidade de `npm install`.
+A página inicial apresenta o quiz **Tecnologia na prática**, no lugar da lista de
+módulos. As páginas HTML das aulas anteriores continuam no repositório para
+preservar os materiais, mas não aparecem na área principal de atividades.
 
-As cinco páginas de aula incluem uma atividade **Agora vamos praticar** com três opções de resposta. A escolha aparece na tela e não é enviada nem armazenada. O cabeçalho liga à área de módulos, ao formulário de cadastro externo e à apostila.
+## Quiz: Tecnologia na prática
 
-Cada página de módulo tem links para a anterior e a próxima no começo e no fim; os controles finais são mais compactos. No primeiro e no último módulo, a direção que não existe aparece indisponível.
+Acesse `quiz.html` ou o botão **Participar do quiz** na página inicial. São 15
+situações com quatro alternativas e **Ainda não sei**, sem cronômetro ou ranking.
+A identificação é opcional. Cada escolha inclui uma indicação de confiança;
+**Ainda não sei** permite avançar sem essa indicação. A correção aparece somente
+após concluir, em uma seção que pode ser aberta com a equipe.
+
+O progresso fica no `localStorage` do navegador. É possível retomar perguntas ou
+consultar o resumo concluído. A conclusão dispara o envio do resumo ao FormSubmit,
+quando o destino está configurado. O apelido, o identificador da atividade, a data,
+os acertos e todas as respostas com confiança e assuntos são enviados ao serviço
+para encaminhamento ao e-mail da equipe. A página informa esse uso antes do início.
+Não há painel central ou banco de dados próprio.
+
+### Ativar o recebimento por e-mail
+
+1. Confirmar com a responsável qual e-mail da equipe deve receber os resumos.
+2. Em `assets/js/quiz-config.js`, preencher `destino` com esse e-mail, ou com o
+   token público do formulário fornecido pelo FormSubmit. Não colocar senhas nem
+   chaves privadas nesse arquivo: ele é público.
+3. Publicar o site em HTTPS. Concluir um quiz com dados de teste no endereço
+   publicado. A primeira utilização exige confirmação do destinatário por e-mail.
+   Abrir a mensagem do FormSubmit e confirmar a ativação.
+4. Concluir outro teste e conferir o resumo na caixa de entrada (e no spam), antes
+   de aplicar à turma. A resposta de sucesso da API confirma aceitação pelo serviço,
+   não entrega na caixa de entrada. Ativação, filtros e limites do provedor ainda
+   podem afetar o recebimento.
+5. Se preferir não expor o endereço no JavaScript público, substituir pelo token
+   público do formulário após configurar o serviço.
+
+O destino foi confirmado pela responsável e configurado como
+`conecta60saquarema@gmail.com`. Ainda é necessário confirmar a ativação no e-mail
+do FormSubmit e testar o recebimento real após publicar. Se o destino for apagado,
+o quiz mantém as respostas locais e informa que o recebimento não está ativado.
+A integração segue a API AJAX do FormSubmit:
+https://formsubmit.co/ajax-documentation e https://formsubmit.co/.
+
+### Falhas, retomada e cópias
+
+O site só apresenta recebimento confirmado quando o serviço retorna sucesso. Se
+estiver sem conexão antes da tentativa, guarda as respostas e tenta quando o
+navegador informar que a internet voltou, enquanto a página estiver aberta. Após
+falha de rede, resposta inválida ou tempo excedido, disponibiliza tentativa manual;
+não faz reenvios ilimitados em segundo plano. Se a página fechar durante o envio,
+a retomada avisa que o recebimento é incerto e pede conferir com a equipe antes de
+reenviar. Uma resposta aceita não é reenviada automaticamente na retomada. Atividades já
+concluídas na versão anterior, que prometia armazenamento apenas local, só são
+enviadas se a pessoa acionar o botão de envio na tela do resumo.
+
+Não há garantia de entrega única do provedor: repetir uma requisição cujo resultado
+é incerto pode gerar outra cópia. O identificador estável da atividade no resumo
+permite reconhecer duplicidades. Evitar responder a mesma atividade em várias abas.
+
+O resumo também pode ser copiado ou baixado em CSV (UTF-8 com BOM; separador ponto
+e vírgula). Não publicar arquivos preenchidos no repositório público. Antes de
+passar um aparelho a outra pessoa, apagar o progresso pelo botão da tela final.
+O gabarito é JavaScript público, não uma área restrita. Áreas e dificuldades são
+referências pedagógicas: avaliar também os desafios práticos, sem classificar
+participantes apenas pelo total de acertos.
+
+### Executar e conferir
+
+Não é necessário build. Para testar localmente: `python3 -m http.server 8000` e
+abrir `http://localhost:8000/quiz.html`. Para conferir o envio real, preferir o site
+publicado em HTTPS e um destinatário ativado. Testar em celular antes da oficina;
+manter as perguntas em papel como alternativa. O quiz precisa de conexão para
+enviar resultados e não tem funcionamento offline garantido.
