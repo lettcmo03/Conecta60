@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologia na prática | Conecta 60+</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/quiz.css">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <script src="assets/js/quiz-config.js" defer></script>
+    <script src="assets/js/quiz.js" defer></script>
+</head>
+<body class="pagina-quiz">
+    <a class="quiz-pular" href="#quiz">Ir para a atividade</a>
+    <header class="cabecalho">
+        <div class="logo-area"><a href="index.html" class="quiz-marca" aria-label="Conecta 60+, página inicial"><img src="assets/img/logo.jpg" alt="" class="logo-img"><span>Conecta 60+</span></a></div>
+        <a class="quiz-voltar-site" href="index.html#area-aulas">Voltar ao início</a>
+    </header>
+    <main id="quiz" class="quiz-container">
+        <noscript><p class="quiz-aviso">Ative o JavaScript do navegador para responder à atividade.</p></noscript>
+        <p id="avisoArmazenamento" class="quiz-aviso" role="status" hidden>Não foi possível guardar o progresso neste navegador. Você pode continuar, mas mantenha esta página aberta até terminar.</p>
+        <section id="inicio" class="quiz-painel" aria-labelledby="tituloInicio">
+            <p class="quiz-etiqueta">Uma conversa sobre o dia a dia digital</p>
+            <h1 id="tituloInicio" tabindex="-1">Tecnologia na prática</h1>
+            <p class="quiz-intro">O que você faria? Explore 15 situações sobre o celular, a internet e suas escolhas.</p>
+            <ul class="quiz-instrucoes">
+                <li>Responda no seu ritmo. Não há cronômetro nem classificação.</li>
+                <li>Escolha uma alternativa e diga como se sente sobre a resposta.</li>
+                <li>Se não souber, escolha “Ainda não sei”. Você pode pedir ajuda para usar a página.</li>
+            </ul>
+            <form id="formInicio">
+                <label class="quiz-label" for="apelido">Como podemos identificar sua atividade? <span>(opcional)</span></label>
+                <input id="apelido" name="apelido" type="text" maxlength="40" autocomplete="off" placeholder="Primeiro nome ou apelido combinado" aria-describedby="privacidadeQuiz">
+                <p id="privacidadeQuiz" class="quiz-nota">O progresso fica neste navegador. Ao concluir, o resumo com suas respostas e a identificação informada será enviado por e-mail à equipe, usando o serviço FormSubmit.</p>
+                <button class="quiz-botao quiz-primario" type="submit">Começar atividade</button>
+            </form>
+            <div id="retomar" class="quiz-retomar" hidden>
+                <p id="textoRetomar"></p>
+                <button id="continuar" class="quiz-botao quiz-primario" type="button">Continuar atividade</button>
+                <button id="novaAtividade" class="quiz-botao quiz-secundario" type="button">Começar outra atividade</button>
+            </div>
+        </section>
+        <section id="perguntas" class="quiz-painel" aria-label="Perguntas da atividade" hidden>
+            <div class="quiz-progresso-texto"><p id="contador"></p><span>Sem pressa</span></div>
+            <progress id="progresso" max="15" value="0" aria-label="Perguntas concluídas"></progress>
+            <form id="formPergunta" novalidate>
+                <fieldset class="quiz-alternativas">
+                    <legend id="enunciado" tabindex="-1"></legend>
+                    <div id="alternativas"></div>
+                </fieldset>
+                <fieldset id="confianca" class="quiz-confianca" hidden>
+                    <legend>Como você se sente sobre sua resposta?</legend>
+                    <div class="quiz-confianca-opcoes">
+                        <label><input type="radio" name="confianca" value="certeza"> Tenho certeza</label>
+                        <label><input type="radio" name="confianca" value="duvida"> Estou em dúvida</label>
+                        <label><input type="radio" name="confianca" value="palpite"> Foi um palpite</label>
+                    </div>
+                </fieldset>
+                <p id="erroResposta" class="quiz-erro" role="alert"></p>
+                <div class="quiz-acoes">
+                    <button id="anterior" class="quiz-botao quiz-secundario" type="button">Voltar</button>
+                    <button id="proxima" class="quiz-botao quiz-primario" type="submit">Próxima pergunta</button>
+                </div>
+            </form>
+            <p class="quiz-nota">Você pode voltar e mudar suas escolhas antes de concluir.</p>
+        </section>
+        <section id="resultado" class="quiz-painel" aria-labelledby="tituloResultado" hidden>
+            <p class="quiz-etiqueta">Obrigado por participar</p>
+            <h1 id="tituloResultado" tabindex="-1">Atividade concluída!</h1>
+            <p id="identificacaoResultado" class="quiz-intro"></p>
+            <p>Suas escolhas ajudam a planejar os próximos encontros. Aguarde abaixo a confirmação de recebimento do resumo pelo serviço de envio.</p>
+            <p id="statusEnvio" class="quiz-aviso" role="status" aria-live="polite"></p>
+            <button id="tentarEnvio" class="quiz-botao quiz-secundario" type="button" hidden>Tentar enviar novamente</button>
+            <div class="quiz-acoes quiz-exportar">
+                <button id="copiarResumo" class="quiz-botao quiz-primario" type="button">Copiar resumo</button>
+                <button id="baixarResultados" class="quiz-botao quiz-secundario" type="button">Baixar respostas (CSV)</button>
+            </div>
+            <p id="statusExportacao" role="status"></p>
+            <div id="copiaManual" hidden>
+                <label class="quiz-label" for="textoResumo">Selecione e copie o resumo abaixo:</label>
+                <textarea id="textoResumo" rows="10" readonly></textarea>
+            </div>
+            <details id="revisao" class="quiz-revisao">
+                <summary>Conferir respostas com a equipe</summary>
+                <p>Durante a atividade coletiva, aguarde a orientação da equipe para abrir a correção. Acertos no quiz são pistas; os desafios práticos ajudam a observar o uso do celular.</p>
+                <p id="totalAcertos"></p>
+                <div id="resumoAreas"></div>
+                <div id="listaRevisao"></div>
+            </details>
+            <button id="refazer" class="quiz-botao quiz-secundario" type="button">Apagar este progresso e recomeçar</button>
+            <p class="quiz-nota">Em aparelho compartilhado, use esse botão antes de passar o celular à próxima pessoa. Os arquivos já baixados permanecem no aparelho.</p>
+        </section>
+    </main>
+    <footer class="quiz-rodape"><p>Conecta 60+ · Tecnologia com autonomia e segurança.</p><a href="index.html#area-aulas">Voltar ao início</a></footer>
+</body>
+</html>
