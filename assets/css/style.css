@@ -54,7 +54,7 @@ body {
 }
 
 .logo-texto span {
-    color: #e6a05b;
+    color: #9a4f12;
 }
 
 .botoes-topo {
@@ -500,7 +500,7 @@ body {
 .btn-inscricao {
     width: 250px;
 
-    background-color: #f28c28;
+    background-color: #b35c12;
 }
 
 .btn-acessar-aulas {
@@ -510,7 +510,7 @@ body {
 }
 
 .btn-inscricao:hover {
-    background-color: #d97718;
+    background-color: #94470c;
 }
 
 .btn-acessar-aulas:hover {
@@ -1704,11 +1704,12 @@ body {
     }
 
     .botoes-topo {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .btn {
-        width: 100%;
+        flex: 1 1 150px;
     }
 
     .menu {
@@ -1751,3 +1752,23 @@ body {
         padding: 20px;
     }
 }
+/* Convite para o quiz, independente do carrossel de módulos. */
+.chamada-quiz { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 18px; background: #edf7f8; border: 1px solid #bad5da; border-radius: 12px; padding: 26px; margin: 0 auto 30px; max-width: 1100px; }
+.chamada-quiz-etiqueta { color: #075f72; font-size: 14px; font-weight: bold; margin-bottom: 8px; }
+.chamada-quiz h3 { color: #075f72; font-size: 24px; margin-bottom: 10px; }
+.chamada-quiz p { line-height: 1.6; }
+.chamada-quiz .btn-comecar-aula { flex-shrink: 0; }
+.chamada-quiz .btn-comecar-aula { display: inline-flex; align-items: center; justify-content: center; min-width: 220px; min-height: 48px; padding: 0 22px; }
+@media (max-width: 600px) { .chamada-quiz { padding: 22px; } }
+/* Botões com link (<a>) precisam de largura automática, sem sublinhado e com o ícone na mesma linha. */
+.btn-apostila, .btn-interesse { width: auto; padding: 0 16px; white-space: nowrap; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 4px; }
+
+/* Texto dos cards de modalidade sobre a foto: painel claro para garantir leitura. */
+.card-conteudo, .online-conteudo { background-color: rgba(255, 255, 255, 0.94); padding: 22px 24px; border-radius: 8px; }
+.card-conteudo p, .online-conteudo p { color: #23363e; }
+
+/* Botão da apostila na seção do encontro: mesmo visual dos demais botões. */
+/* Texto e botão da apostila lado a lado, na mesma linha (quebram só no celular). */
+.aviso-area-aulas { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px; }
+.aviso-area-aulas p { margin: 0; }
+.btn-apostila-encontro { margin-top: 0; font-size: 16px; }
