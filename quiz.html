@@ -5,10 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tecnologia na prática | Conecta 60+</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/quiz.css">
+    <style>
+/* Estilos exclusivos do quiz: não alteram os módulos existentes. */
+.pagina-quiz { background: #f0f6f7; color: #23363e; font-size: 18px; line-height: 1.6; }
+.pagina-quiz [hidden] { display: none !important; }
+.pagina-quiz button, .pagina-quiz input, .pagina-quiz textarea { font: inherit; }
+.pagina-quiz button, .pagina-quiz a, .pagina-quiz label { touch-action: manipulation; }
+.pagina-quiz a { color: #075f72; text-underline-offset: 3px; }
+.pagina-quiz :focus-visible { outline: 3px solid #ad5a0d; outline-offset: 4px; }
+.pagina-quiz .cabecalho { height: auto; min-height: 85px; gap: 18px; padding: 12px max(20px, calc((100% - 1050px)/2)); }
+.quiz-pular { position: absolute; top: -100px; left: 12px; padding: 12px; background: white; z-index: 2; }
+.quiz-pular:focus { top: 10px; }
+.quiz-marca { display: inline-flex; align-items: center; gap: 10px; font-weight: bold; text-decoration: none; font-size: 20px; }
+.quiz-voltar-site { font-weight: bold; padding: 10px; }
+.quiz-container { width: min(100% - 32px, 850px); margin: 36px auto 52px; }
+.quiz-painel { background: white; border: 1px solid #cadfe3; border-radius: 18px; padding: clamp(22px, 5vw, 44px); box-shadow: 0 8px 28px #123e4808; }
+.quiz-etiqueta { font-size: .85rem; letter-spacing: .07em; text-transform: uppercase; color: #075f72; font-weight: bold; margin-bottom: 12px; }
+.pagina-quiz h1 { font-size: clamp(1.9rem, 5vw, 2.7rem); line-height: 1.2; color: #075f72; margin-bottom: 18px; }
+.quiz-intro { font-size: 1.2rem; }
+.quiz-painel p { margin-bottom: 16px; }
+.quiz-instrucoes { padding-left: 24px; margin: 20px 0 28px; }
+.quiz-instrucoes li { margin-bottom: 10px; }
+.quiz-label { display: block; font-weight: bold; margin: 18px 0 8px; }
+.quiz-label span { font-weight: normal; }
+#apelido, #textoResumo { width: 100%; max-width: 100%; border: 2px solid #829ca4; border-radius: 9px; padding: 13px; color: #23363e; background: white; }
+#textoResumo { font-size: 16px; margin-bottom: 18px; }
+.quiz-nota { color: #50616a; font-size: 1rem; margin-top: 14px; }
+.quiz-botao { display: inline-flex; justify-content: center; align-items: center; min-height: 54px; padding: 12px 22px; border: 2px solid #075f72; border-radius: 10px; font-weight: bold; cursor: pointer; text-align: center; line-height: 1.4; }
+.quiz-primario { color: white; background: #075f72; }
+.quiz-primario:hover { background: #04485a; }
+.quiz-secundario { color: #075f72; background: white; }
+.quiz-secundario:hover { background: #eef7f8; }
+.quiz-botao:disabled { opacity: .45; cursor: default; }
+.quiz-retomar { border-top: 1px solid #cadfe3; padding-top: 24px; margin-top: 24px; }
+.quiz-retomar button { margin: 0 8px 12px 0; }
+.quiz-progresso-texto { display: flex; justify-content: space-between; gap: 12px; color: #075f72; font-weight: bold; }
+.quiz-progresso-texto span { color: #50616a; font-weight: normal; }
+.quiz-progresso-texto p { margin-bottom: 8px; }
+#progresso { display: block; width: 100%; height: 10px; margin-bottom: 28px; accent-color: #075f72; border: none; border-radius: 8px; }
+#progresso::-webkit-progress-bar { background: #e6eff1; border-radius: 8px; }
+#progresso::-webkit-progress-value { background: #075f72; border-radius: 8px; }
+.quiz-alternativas, .quiz-confianca { border: 0; min-width: 0; padding: 0; margin: 0; }
+#enunciado { font-size: clamp(1.25rem, 3vw, 1.55rem); font-weight: bold; line-height: 1.4; margin-bottom: 22px; width: 100%; }
+.quiz-opcao { display: flex; align-items: flex-start; gap: 12px; border: 2px solid #cad9de; border-radius: 11px; padding: 16px; margin-bottom: 12px; cursor: pointer; }
+.quiz-opcao:hover { background: #f1f8f9; border-color: #075f72; }
+.quiz-opcao:has(input:checked), .quiz-confianca-opcoes label:has(input:checked) { border-color: #075f72; background: #eaf5f6; }
+.quiz-opcao input, .quiz-confianca input { width: 22px; height: 22px; flex: 0 0 22px; margin-top: 4px; accent-color: #075f72; }
+.quiz-letra { font-weight: bold; color: #075f72; }
+.quiz-confianca { margin-top: 26px; }
+.quiz-confianca legend { font-weight: bold; margin-bottom: 12px; }
+.quiz-confianca-opcoes { display: flex; flex-wrap: wrap; gap: 10px; }
+.quiz-confianca-opcoes label { display: flex; gap: 8px; align-items: flex-start; border: 2px solid #cad9de; border-radius: 9px; padding: 12px; cursor: pointer; flex: 1 1 180px; }
+.quiz-erro { color: #922d1d; font-weight: bold; min-height: 1.6em; margin-top: 14px; }
+.quiz-acoes { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin: 12px 0; }
+.quiz-aviso { border-left: 4px solid #075f72; background: #eaf5f6; padding: 14px 18px; border-radius: 4px; margin-bottom: 20px; }
+.quiz-exportar { justify-content: flex-start; margin-top: 24px; }
+.quiz-revisao { border-top: 1px solid #cadfe3; border-bottom: 1px solid #cadfe3; padding: 22px 0; margin: 28px 0; }
+.quiz-revisao summary { color: #075f72; font-weight: bold; cursor: pointer; padding: 8px 0; }
+.quiz-revisao summary + p { margin-top: 14px; }
+.quiz-revisao-item { border-top: 1px solid #cadfe3; padding: 20px 0 8px; overflow-wrap: anywhere; }
+.quiz-revisao-item h2 { font-size: 1.15rem; margin-bottom: 12px; line-height: 1.5; }
+.quiz-revisao-item p { font-size: 1rem; margin-bottom: 8px; }
+.quiz-areas { padding-left: 22px; margin-bottom: 20px; }
+.quiz-rodape { padding: 24px 20px; text-align: center; background: white; border-top: 1px solid #cadfe3; font-size: 1rem; }
+.quiz-rodape p { margin-bottom: 8px; }
+@media (max-width: 480px) {
+ .quiz-container { width: calc(100% - 24px); margin-top: 22px; }
+ .quiz-painel { padding: 22px 18px; }
+ .quiz-acoes .quiz-botao { flex: 1 1 auto; }
+ .quiz-exportar .quiz-botao { width: 100%; }
+ .quiz-opcao { padding: 13px 11px; gap: 9px; }
+ .quiz-progresso-texto { font-size: 1rem; }
+ .quiz-confianca-opcoes { flex-direction: column; }
+ .quiz-confianca-opcoes label { flex: auto; }
+ .quiz-retomar button { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .pagina-quiz { scroll-behavior: auto; } }
+
+@media (max-width: 380px) { .quiz-marca { gap: 5px; font-size: 17px; } .quiz-marca .logo-img { width: 44px; height: 44px; } .quiz-voltar-site { font-size: 16px; padding: 6px; } }
+
+#statusEnvio[data-status="erro"], #statusEnvio[data-status="incerto"], #statusEnvio[data-status="configuracao"] { border-color: #9a4b13; background: #fff4e8; }
+#statusEnvio[data-status="aceito"] { border-color: #23704b; background: #eff9f3; }
+
+</style>
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
-    <script src="assets/js/quiz-config.js" defer></script>
-    <script src="assets/js/quiz.js" defer></script>
+    
 </head>
 <body class="pagina-quiz">
     <a class="quiz-pular" href="#quiz">Ir para a atividade</a>
@@ -98,5 +179,330 @@
         </div>
         <p>Copyright © 2026 Conecta 60+. All rights reserved</p>
     </footer>
+<script>
+/* Destino de recebimento do FormSubmit. Não colocar senhas ou chaves privadas aqui.
+   Preencher com o e-mail confirmado da equipe ou com o token público do formulário.
+   Antes da oficina, concluir um teste e confirmar a ativação no e-mail recebido. */
+window.CONECTA_QUIZ_EMAIL = {
+    destino: 'conecta60saquarema@gmail.com'
+};
+
+</script>
+<script>
+/* Quiz estático com progresso local e envio do resumo via FormSubmit. */
+(() => {
+    'use strict';
+
+    const perguntas = [
+        { texto: 'Você recebeu o endereço de um encontro pelo WhatsApp. Como pode levá-lo para o aplicativo de mapas sem digitar tudo novamente?', opcoes: ['Tirando uma foto do celular com outro aparelho.', 'Copiando o endereço e colando na busca do mapa.', 'Aumentando o volume do celular.', 'Salvando o número de quem enviou.'], correta: 1, area: 'Navegação e uso do celular', nivel: 'Básica', explicacao: 'Copiar e colar permite levar o texto para a busca do mapa sem redigitá-lo.' },
+        { texto: 'Você quer guardar exatamente o que está aparecendo na tela, incluindo uma mensagem de confirmação. Qual recurso atende melhor?', opcoes: ['Gravação de áudio.', 'Lista de contatos.', 'Captura de tela.', 'Histórico de chamadas.'], correta: 2, area: 'Imagens e arquivos', nivel: 'Básica', explicacao: 'A captura de tela registra uma imagem do que está sendo exibido. O procedimento varia conforme o aparelho.' },
+        { texto: 'O celular mostra que está conectado ao Wi-Fi, mas nenhum site abre. Qual afirmação faz mais sentido?', opcoes: ['A conexão com o Wi-Fi pode existir mesmo sem acesso à internet.', 'Estar conectado ao Wi-Fi garante que a internet está funcionando.', 'Isso significa que todos os sites foram apagados.', 'É obrigatório trocar de celular.'], correta: 0, area: 'Navegação e uso do celular', nivel: 'Intermediária', explicacao: 'O celular pode estar conectado à rede Wi-Fi enquanto essa rede está sem acesso à internet.' },
+        { texto: 'Você precisa enviar um endereço a alguém que está em uma reunião e não pode ouvir áudio. Qual opção facilita a consulta?', opcoes: ['Mandar vários áudios curtos.', 'Fazer uma chamada de vídeo.', 'Enviar apenas “é naquele lugar que comentei”.', 'Escrever o endereço completo em uma mensagem.'], correta: 3, area: 'Comunicação', nivel: 'Básica', explicacao: 'Uma mensagem com o endereço completo pode ser lida e consultada sem reproduzir áudio.' },
+        { texto: 'Você fotografou um aviso, mas as letras ficaram difíceis de ler. Qual é a melhor tentativa?', opcoes: ['Encaminhar a mesma foto várias vezes.', 'Refazer a foto, melhorando luz, foco e enquadramento.', 'Aumentar o volume antes de fotografar.', 'Trocar o nome do contato que receberá a foto.'], correta: 1, area: 'Imagens e arquivos', nivel: 'Básica', explicacao: 'A luz, o foco e o enquadramento influenciam a legibilidade da fotografia.' },
+        { texto: 'Você abriu um PDF no navegador e depois fechou a página. Isso garante que o arquivo ficou salvo no celular?', opcoes: ['Sim, todo arquivo aberto fica salvo permanentemente.', 'Sim, mas apenas se o celular estiver carregando.', 'Não; visualizar e salvar podem ser ações diferentes.', 'Não, porque celulares não guardam PDFs.'], correta: 2, area: 'Imagens e arquivos', nivel: 'Intermediária', explicacao: 'Abrir um arquivo não garante que uma cópia recuperável foi salva. É importante conferir o download e onde ele ficou.' },
+        { texto: 'Você vai pesquisar como cuidar de uma planta chamada girassol. Qual busca dá uma indicação mais clara do que procura?', opcoes: ['Como cuidar de girassol em vaso.', 'Coisas.', 'Me ajuda.', 'Internet plantas tudo.'], correta: 0, area: 'Pesquisa e decisões', nivel: 'Básica', explicacao: 'Uma busca com o assunto e o contexto ajuda a encontrar resultados relacionados à sua necessidade.' },
+        { texto: 'Uma loja anuncia um produto por R$ 80, com R$ 25 de frete. Outra vende o mesmo produto por R$ 99, com frete grátis. Considerando apenas o total, qual custa menos?', opcoes: ['A primeira, porque R$ 80 é menor que R$ 99.', 'As duas custam o mesmo.', 'Não é possível calcular sem saber a marca.', 'A segunda: R$ 99, contra R$ 105 da primeira.'], correta: 3, area: 'Pesquisa e decisões', nivel: 'Intermediária', explicacao: 'Na primeira oferta, R$ 80 + R$ 25 = R$ 105. A segunda tem total de R$ 99.' },
+        { texto: 'Você quer enviar a foto de um cartaz, mas nela também aparece um documento pessoal sobre a mesa. O que é melhor fazer?', opcoes: ['Enviar e pedir que ninguém olhe o documento.', 'Refazer a foto sem o documento ou recortar essa parte antes de enviar.', 'Aumentar o brilho da foto.', 'Enviar em um grupo maior para chegar mais rápido.'], correta: 1, area: 'Segurança e privacidade', nivel: 'Intermediária', explicacao: 'Confira a imagem antes de compartilhar e remova da foto os dados pessoais que não precisam aparecer.' },
+        { texto: 'Um aplicativo de lanterna pede acesso à sua lista de contatos. Qual decisão é mais cuidadosa?', opcoes: ['Autorizar, porque todo pedido é obrigatório.', 'Autorizar, porque contatos fazem a luz ficar mais forte.', 'Questionar a necessidade desse acesso e não autorizar sem uma finalidade clara.', 'Publicar a lista de contatos para testar o aplicativo.'], correta: 2, area: 'Segurança e privacidade', nivel: 'Intermediária', explicacao: 'O acesso aos contatos não tem uma finalidade evidente para acender a lanterna. Avalie a relação entre a permissão e a tarefa.' },
+        { texto: 'Uma página tem um cadeado ou indica uma conexão HTTPS. Isso, sozinho, prova que a loja é confiável?', opcoes: ['Não. A conexão pode ser protegida e a loja ainda ser fraudulenta.', 'Sim. O cadeado garante que a compra será entregue.', 'Sim. O cadeado significa que o governo aprovou a loja.', 'Não. O cadeado significa que o site está fora do ar.'], correta: 0, area: 'Segurança e privacidade', nivel: 'Avançada', explicacao: 'HTTPS protege a conexão, mas não garante a honestidade de quem opera o site nem a entrega de uma compra.' },
+        { texto: 'Você recebe uma notícia alarmante encaminhada por várias pessoas. Qual é a melhor atitude antes de repassar?', opcoes: ['Encaminhar, porque muitas pessoas já receberam.', 'Verificar apenas se o texto tem uma foto.', 'Repassar com a frase “não sei se é verdade”.', 'Procurar a origem, conferir a data e comparar com fontes confiáveis.'], correta: 3, area: 'Informação e pensamento crítico', nivel: 'Intermediária', explicacao: 'O número de compartilhamentos não confirma uma notícia. Verifique a origem, a data e outras fontes antes de repassar.' },
+        { texto: 'Você recebe esta mensagem: “Troquei de número. Preciso de um Pix urgente”. A foto é de uma pessoa conhecida. Como confirmar melhor?', opcoes: ['Confiar na foto e fazer o Pix.', 'Entrar em contato por outro meio que você já conhecia, como o número antigo.', 'Perguntar o nome da pessoa na mesma conversa e aceitar qualquer resposta.', 'Pedir que a pessoa repita a mensagem.'], correta: 1, area: 'Segurança e privacidade', nivel: 'Intermediária', explicacao: 'Uma foto pode ser copiada. Confirme o pedido por um canal que você já conhecia, sem depender apenas da conversa recebida.' },
+        { texto: 'Uma inteligência artificial respondeu com muita segurança e escreveu um texto bem organizado. O que isso permite concluir?', opcoes: ['Que todas as informações estão corretas.', 'Que a resposta foi revisada por um especialista.', 'Que o texto parece convincente, mas as informações ainda podem precisar de verificação.', 'Que não vale a pena ler a resposta.'], correta: 2, area: 'Informação e pensamento crítico', nivel: 'Avançada', explicacao: 'Uma resposta clara e convincente pode conter erros. Confira as informações relevantes antes de usá-las ou compartilhá-las.' },
+        { texto: 'Você apagou uma foto do celular e descobriu que ela também desapareceu de outro aparelho conectado à mesma conta. Qual explicação é possível?', opcoes: ['Os aparelhos podem estar sincronizados, e a exclusão pode ter sido refletida nos dois.', 'Toda foto apagada é enviada automaticamente a outra pessoa.', 'A conexão Bluetooth sempre apaga fotos iguais.', 'Isso prova que a câmera do segundo aparelho quebrou.'], correta: 0, area: 'Imagens e arquivos', nivel: 'Avançada', explicacao: 'Dependendo do serviço e da configuração, a sincronização pode refletir alterações e exclusões em mais de um aparelho.' }
+    ];
+
+    const chave = 'conecta60-quiz-v1';
+    const versao = 1;
+    const rotulosConfianca = { certeza: 'Tenho certeza', duvida: 'Estou em dúvida', palpite: 'Foi um palpite' };
+    const el = id => document.getElementById(id);
+    let estado;
+    let envioEmAndamento = false;
+
+    function novoId() {
+        return typeof crypto.randomUUID === 'function' ? crypto.randomUUID() : 'quiz-' + Date.now() + '-' + Math.random().toString(36).slice(2);
+    }
+
+    function destinoEnvio() {
+        const valor = window.CONECTA_QUIZ_EMAIL && window.CONECTA_QUIZ_EMAIL.destino;
+        if (typeof valor !== 'string') return '';
+        const destino = valor.trim();
+        // Aceita um e-mail ou o token público gerado pelo serviço, nunca uma URL arbitrária.
+        return /^[^\s@/]+@[^\s@/]+\.[^\s@/]+$/.test(destino) || /^[a-zA-Z0-9_-]{16,128}$/.test(destino) ? destino : '';
+    }
+
+
+    function estadoInicial(apelido = '') {
+        return { id: novoId(), envio: { status: 'pendente' }, versao, apelido: apelido.trim().slice(0, 40), atual: 0, finalizado: false, concluidoEm: null, respostas: perguntas.map(() => ({ opcao: null, confianca: null })) };
+    }
+
+    function respostaCompleta(r) {
+        return r.opcao === -1 || (Number.isInteger(r.opcao) && r.opcao >= 0 && r.opcao < 4 && Object.hasOwn(rotulosConfianca, r.confianca));
+    }
+
+    function carregar() {
+        try {
+            const salvo = localStorage.getItem(chave);
+            if (!salvo) return null;
+            const e = JSON.parse(salvo);
+            if (!e || e.versao !== versao || typeof e.apelido !== 'string' || e.apelido.length > 40 || !Number.isInteger(e.atual) || e.atual < 0 || e.atual >= perguntas.length || typeof e.finalizado !== 'boolean' || !Array.isArray(e.respostas) || e.respostas.length !== perguntas.length) return null;
+            const validas = e.respostas.every(r => r && (r.opcao === null || (Number.isInteger(r.opcao) && r.opcao >= -1 && r.opcao < 4)) && (r.confianca === null || Object.hasOwn(rotulosConfianca, r.confianca)));
+            if (!validas || (e.finalizado && (!e.respostas.every(respostaCompleta) || typeof e.concluidoEm !== 'string' || Number.isNaN(Date.parse(e.concluidoEm))))) return null;
+            if (typeof e.id !== 'string' || !/^[a-zA-Z0-9-]{8,100}$/.test(e.id)) e.id = novoId();
+            const statusValidos = ['pendente', 'configuracao', 'offline', 'enviando', 'aceito', 'erro', 'incerto', 'anterior'];
+            if (!e.envio || !statusValidos.includes(e.envio.status)) e.envio = { status: e.finalizado ? 'anterior' : 'pendente' };
+            // Uma página fechada durante uma requisição pode ter enviado o resumo.
+            // Nesse caso, não repetir automaticamente e arriscar e-mails duplicados.
+            if (e.envio.status === 'enviando') e.envio = { status: 'incerto' };
+            return e;
+        } catch (erro) {
+            el('avisoArmazenamento').hidden = false;
+            return null;
+        }
+    }
+
+    function salvar() {
+        try { localStorage.setItem(chave, JSON.stringify(estado)); }
+        catch (erro) { el('avisoArmazenamento').hidden = false; }
+    }
+
+    function mostrar(tela, foco) {
+        ['inicio', 'perguntas', 'resultado'].forEach(id => { el(id).hidden = id !== tela; });
+        if (foco) {
+            el(foco).focus();
+            window.scrollTo({ top: 0, behavior: 'instant' });
+        }
+    }
+
+    function criar(tag, texto, classe) {
+        const no = document.createElement(tag);
+        if (texto !== undefined) no.textContent = texto;
+        if (classe) no.className = classe;
+        return no;
+    }
+
+    function limparErro() { el('erroResposta').textContent = ''; }
+
+    function renderizarPergunta() {
+        const p = perguntas[estado.atual];
+        const r = estado.respostas[estado.atual];
+        el('contador').textContent = `Pergunta ${estado.atual + 1} de ${perguntas.length}`;
+        el('progresso').value = estado.respostas.filter(respostaCompleta).length;
+        el('enunciado').textContent = p.texto;
+        el('alternativas').replaceChildren();
+        [...p.opcoes, 'Ainda não sei'].forEach((texto, indice) => {
+            const valor = indice === 4 ? -1 : indice;
+            const label = criar('label', undefined, 'quiz-opcao');
+            const input = criar('input');
+            input.type = 'radio'; input.name = 'resposta'; input.value = String(valor); input.checked = r.opcao === valor;
+            const span = criar('span');
+            if (indice < 4) span.append(criar('span', `${'ABCD'[indice]}. `, 'quiz-letra'));
+            span.append(document.createTextNode(texto));
+            label.append(input, span);
+            el('alternativas').append(label);
+            input.addEventListener('change', () => {
+                r.opcao = valor;
+                if (valor === -1) {
+                    r.confianca = null;
+                    document.querySelectorAll('[name="confianca"]').forEach(radio => { radio.checked = false; });
+                }
+                el('confianca').hidden = valor === -1;
+                limparErro(); salvar();
+            });
+        });
+        el('confianca').hidden = r.opcao === null || r.opcao === -1;
+        document.querySelectorAll('[name="confianca"]').forEach(radio => { radio.checked = radio.value === r.confianca; });
+        el('anterior').disabled = estado.atual === 0;
+        el('proxima').textContent = estado.atual === perguntas.length - 1 ? 'Concluir atividade' : 'Próxima pergunta';
+        limparErro();
+        mostrar('perguntas', 'enunciado');
+    }
+
+    function textoEscolha(p, r) { return r.opcao === -1 ? 'Ainda não sei' : `${'ABCD'[r.opcao]}. ${p.opcoes[r.opcao]}`; }
+    function acertos() { return estado.respostas.filter((r, i) => r.opcao === perguntas[i].correta).length; }
+    function resultadoResposta(p, r) { return r.opcao === -1 ? 'Ainda não sei' : r.opcao === p.correta ? 'Acerto' : 'Rever'; }
+
+    function resumoTexto() {
+        const linhas = ['Conecta 60+ - Tecnologia na prática', `Identificador da atividade: ${estado.id}`, `Participante: ${estado.apelido || 'Sem identificação'}`, `Concluído em: ${new Date(estado.concluidoEm).toLocaleString('pt-BR')}`, `Acertos: ${acertos()} de ${perguntas.length}`, ''];
+        perguntas.forEach((p, i) => {
+            const r = estado.respostas[i];
+            linhas.push(`${i + 1}. ${p.area} | ${p.nivel}`, `Pergunta: ${p.texto}`, `Escolha: ${textoEscolha(p, r)}`, `Confiança: ${rotulosConfianca[r.confianca] || 'Não se aplica'}`, `Resultado: ${resultadoResposta(p, r)}`, '');
+        });
+        linhas.push('Este resumo foi gerado no aparelho. O status de envio por e-mail aparece na tela da atividade.');
+        return linhas.join('\n');
+    }
+
+    function renderizarResultado() {
+        el('identificacaoResultado').textContent = estado.apelido ? `${estado.apelido}, você chegou ao fim das ${perguntas.length} situações.` : `Você chegou ao fim das ${perguntas.length} situações.`;
+        el('totalAcertos').textContent = `${acertos()} de ${perguntas.length} respostas corretas. Observe cada assunto, sem atribuir um nível geral apenas pela pontuação.`;
+        const areas = new Map();
+        perguntas.forEach((p, i) => {
+            const v = areas.get(p.area) || { total: 0, certas: 0, naoSei: 0 };
+            v.total++; if (estado.respostas[i].opcao === p.correta) v.certas++;
+            if (estado.respostas[i].opcao === -1) v.naoSei++;
+            areas.set(p.area, v);
+        });
+        const lista = criar('ul', undefined, 'quiz-areas');
+        areas.forEach((v, area) => lista.append(criar('li', `${area}: ${v.certas}/${v.total} acertos; ${v.naoSei} “ainda não sei”.`)));
+        el('resumoAreas').replaceChildren(lista);
+        el('listaRevisao').replaceChildren();
+        perguntas.forEach((p, i) => {
+            const r = estado.respostas[i];
+            const item = criar('article', undefined, 'quiz-revisao-item');
+            item.append(criar('h2', `${i + 1}. ${p.texto}`), criar('p', `Sua escolha: ${textoEscolha(p, r)}`), criar('p', `Como se sentiu: ${rotulosConfianca[r.confianca] || 'Ainda não sabia'}`), criar('p', `Resposta correta: ${'ABCD'[p.correta]}. ${p.opcoes[p.correta]}`), criar('p', p.explicacao));
+            el('listaRevisao').append(item);
+        });
+        el('revisao').open = false;
+        el('copiaManual').hidden = true;
+        el('statusExportacao').textContent = '';
+        mostrar('resultado', 'tituloResultado');
+        atualizarStatusEnvio();
+        if (['pendente', 'configuracao', 'offline'].includes(estado.envio.status)) enviarResumo();
+    }
+
+    el('formInicio').addEventListener('submit', evento => {
+        evento.preventDefault();
+        estado = estadoInicial(el('apelido').value); salvar(); renderizarPergunta();
+    });
+    el('formPergunta').addEventListener('submit', evento => {
+        evento.preventDefault();
+        const r = estado.respostas[estado.atual];
+        if (!respostaCompleta(r)) {
+            el('erroResposta').textContent = r.opcao === null ? 'Escolha uma alternativa ou “Ainda não sei” para continuar.' : 'Indique como você se sente sobre a resposta para continuar.';
+            return;
+        }
+        if (estado.atual < perguntas.length - 1) { estado.atual++; salvar(); renderizarPergunta(); }
+        else {
+            const pendente = estado.respostas.findIndex(resposta => !respostaCompleta(resposta));
+            if (pendente !== -1) { estado.atual = pendente; salvar(); renderizarPergunta(); return; }
+            estado.finalizado = true; estado.concluidoEm = new Date().toISOString(); salvar(); renderizarResultado();
+        }
+    });
+    document.querySelectorAll('[name="confianca"]').forEach(radio => radio.addEventListener('change', () => {
+        estado.respostas[estado.atual].confianca = radio.value; limparErro(); salvar();
+    }));
+    el('anterior').addEventListener('click', () => { if (estado.atual > 0) { estado.atual--; salvar(); renderizarPergunta(); } });
+    el('continuar').addEventListener('click', () => { if (estado.finalizado) renderizarResultado(); else renderizarPergunta(); });
+
+    function reiniciar() {
+        if (envioEmAndamento) return;
+        if (!window.confirm('Apagar as respostas guardadas neste navegador e começar outra atividade? Arquivos já baixados não serão apagados.')) return;
+        try { localStorage.removeItem(chave); } catch (erro) { el('avisoArmazenamento').hidden = false; }
+        estado = estadoInicial(); el('apelido').value = '';
+        el('retomar').hidden = true; el('formInicio').hidden = false;
+        mostrar('inicio', 'tituloInicio');
+    }
+    el('novaAtividade').addEventListener('click', reiniciar);
+    el('refazer').addEventListener('click', reiniciar);
+    el('copiarResumo').addEventListener('click', async () => {
+        const texto = resumoTexto();
+        try {
+            await navigator.clipboard.writeText(texto);
+            el('statusExportacao').textContent = 'Resumo copiado. O status de envio por e-mail aparece acima.';
+        } catch (erro) {
+            el('textoResumo').value = texto; el('copiaManual').hidden = false;
+            el('textoResumo').focus(); el('textoResumo').select();
+            el('statusExportacao').textContent = 'A cópia automática não está disponível. Você pode copiar o texto na caixa abaixo.';
+        }
+    });
+
+    function celulaCSV(valor) {
+        let texto = String(valor ?? '');
+        // Evita que nomes ou outros textos sejam interpretados como fórmulas.
+        if (/^[\s]*[=+@\-]/.test(texto)) texto = "'" + texto;
+        return '"' + texto.replaceAll('"', '""') + '"';
+    }
+    el('baixarResultados').addEventListener('click', () => {
+        const linhas = [['Participante', 'Conclusão (UTC)', 'Questão', 'Área', 'Dificuldade prevista', 'Pergunta', 'Resposta escolhida', 'Confiança', 'Resultado', 'Resposta correta']];
+        perguntas.forEach((p, i) => {
+            const r = estado.respostas[i];
+            linhas.push([estado.apelido || 'Sem identificação', estado.concluidoEm, i + 1, p.area, p.nivel, p.texto, textoEscolha(p, r), rotulosConfianca[r.confianca] || 'Não se aplica', resultadoResposta(p, r), `${'ABCD'[p.correta]}. ${p.opcoes[p.correta]}`]);
+        });
+        const conteudo = '\uFEFF' + linhas.map(linha => linha.map(celulaCSV).join(';')).join('\r\n');
+        const url = URL.createObjectURL(new Blob([conteudo], { type: 'text/csv;charset=utf-8;' }));
+        const a = criar('a'); a.href = url; a.download = 'conecta60-respostas-' + estado.concluidoEm.replace(/[:.]/g, '-') + '.csv';
+        document.body.append(a); a.click(); a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 10000);
+        el('statusExportacao').textContent = 'Download solicitado. Você também pode guardar essa cópia das respostas.';
+    });
+
+    function atualizarStatusEnvio() {
+        const status = estado.envio.status;
+        const mensagens = {
+            pendente: 'Preparando o envio do resumo…',
+            configuracao: 'O recebimento pela equipe ainda não está ativado. Guarde o resumo ou mostre esta tela à equipe.',
+            offline: 'Você está sem conexão. Mantenha esta página aberta: tentaremos enviar quando a internet voltar. O resumo continua disponível neste aparelho.',
+            enviando: 'Enviando o resumo à equipe… Aguarde antes de fechar a página.',
+            aceito: 'Resumo recebido pelo serviço de envio para o e-mail da equipe. Você pode guardar uma cópia abaixo.',
+            erro: 'Não foi possível confirmar o envio. Suas respostas continuam disponíveis. Tente novamente ou mostre o resumo à equipe.',
+            anterior: 'Esta atividade foi concluída na versão anterior, sem envio automático. Você pode enviar o resumo à equipe pelo botão abaixo.',
+            incerto: 'A página foi fechada durante o envio e não conseguimos confirmar o recebimento. Consulte a equipe antes de tentar novamente para evitar uma cópia duplicada.'
+        };
+        el('statusEnvio').textContent = mensagens[status] || mensagens.erro;
+        el('statusEnvio').dataset.status = status;
+        el('tentarEnvio').hidden = !['erro', 'offline', 'incerto', 'anterior'].includes(status);
+        el('tentarEnvio').textContent = status === 'anterior' ? 'Enviar resumo à equipe' : 'Tentar enviar novamente';
+        el('tentarEnvio').disabled = envioEmAndamento;
+        el('refazer').disabled = envioEmAndamento;
+    }
+
+    async function enviarResumo() {
+        if (!estado.finalizado || envioEmAndamento || estado.envio.status === 'aceito') return;
+        const destino = destinoEnvio();
+        if (!destino) {
+            estado.envio = { status: 'configuracao' }; salvar(); atualizarStatusEnvio(); return;
+        }
+        if (navigator.onLine === false) {
+            estado.envio = { status: 'offline' }; salvar(); atualizarStatusEnvio(); return;
+        }
+        const atividade = estado;
+        envioEmAndamento = true;
+        estado.envio = { status: 'enviando' }; salvar(); atualizarStatusEnvio();
+        const controle = new AbortController();
+        const limite = setTimeout(() => controle.abort(), 15000);
+        try {
+            const resposta = await fetch('https://formsubmit.co/ajax/' + encodeURIComponent(destino), {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                signal: controle.signal,
+                body: JSON.stringify({
+                    _subject: 'Conecta 60+ | Resumo do quiz',
+                    _template: 'table',
+                    identificador: estado.id,
+                    participante: estado.apelido || 'Sem identificação',
+                    conclusao_utc: estado.concluidoEm,
+                    acertos: acertos() + ' de ' + perguntas.length,
+                    resumo: resumoTexto()
+                })
+            });
+            if (!resposta.ok) throw new Error('Falha no serviço de envio');
+            const dados = await resposta.json();
+            if (!dados || (dados.success !== true && dados.success !== 'true')) throw new Error('Recebimento não confirmado');
+            atividade.envio = { status: 'aceito', recebidoEm: new Date().toISOString() };
+        } catch (erro) {
+            atividade.envio = { status: 'erro' };
+        } finally {
+            clearTimeout(limite);
+            envioEmAndamento = false;
+            if (estado === atividade) { salvar(); atualizarStatusEnvio(); }
+        }
+    }
+
+    el('tentarEnvio').addEventListener('click', enviarResumo);
+    window.addEventListener('online', () => {
+        if (estado.finalizado && estado.envio.status === 'offline') enviarResumo();
+    });
+    if (!destinoEnvio()) {
+        el('privacidadeQuiz').textContent = 'O recebimento pela equipe ainda precisa ser ativado. Você pode responder; o progresso e o resumo ficam neste navegador para mostrar à equipe.';
+    }
+
+    estado = carregar();
+    if (estado) {
+        el('formInicio').hidden = true; el('retomar').hidden = false;
+        el('textoRetomar').textContent = estado.finalizado ? 'Há uma atividade concluída neste navegador. Você pode abrir o resumo ou começar outra.' : `Há uma atividade em andamento${estado.apelido ? ' de ' + estado.apelido : ''}. Você pode continuar de onde parou.`;
+        if (estado.finalizado) el('continuar').textContent = 'Ver resumo da atividade';
+    } else { estado = estadoInicial(); }
+})();
+
+</script>
 </body>
 </html>
